@@ -75,3 +75,26 @@ function myForEach(value, index, array) {
 }
 
 document.getElementById("forEach").innerHTML = num;
+
+
+// JavaScript Array map()
+document.getElementById("arrayMap").innerHTML = numbers1;
+let num1 = "";
+numbers1.map(myMap);
+
+function myMap(value, index, array) {
+    num1 += value * 2 + "<br>";
+}
+
+document.getElementById("map").innerHTML = num1;
+document.getElementById("map1").innerHTML = typeof(numbers1.map(myMap));
+document.getElementById("map2").innerHTML = Array.isArray(numbers1.map(myMap));
+
+/* // OR we can write above as
+let num1 = numbers1.map(myMap);
+
+function myMap(value, index, array) {
+    return value * 2 + "<br>";
+}
+
+document.getElementById("map").innerHTML = num1; */
