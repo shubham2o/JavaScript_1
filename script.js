@@ -19,3 +19,10 @@ function undoReplace() {
     let text = document.getElementById("myReplace").innerHTML;
     document.getElementById("myReplace").innerHTML = text.replace(/W3sChOoLs/i, "Microsoft");
 }
+
+
+// Split() Method
+let text = "a, b, c, d, e";
+const myArray = text.split(",");
+document.getElementById("mySplit").innerHTML = 
+myArray[0] + "<br>" + myArray[1] + "<br>" + myArray[2] + "<br>" + myArray[3] + "<br>" + myArray[4];
