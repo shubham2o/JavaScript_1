@@ -63,3 +63,15 @@ function randomSort() {
     points2.sort(function (a, b) {return 0.5 - Math.random()});
     document.getElementById("randomOrder").innerHTML = points2;
 }
+
+
+// JavaScript Array forEach()
+const numbers1 = [45, 4, 9, 16, 25];
+let num = "";
+numbers1.forEach(myForEach);
+
+function myForEach(value, index, array) {
+    num += value + "<br>";
+}
+
+document.getElementById("forEach").innerHTML = num;
