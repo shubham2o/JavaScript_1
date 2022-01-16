@@ -45,3 +45,21 @@ document.getElementById("myTemplates").innerHTML = html;
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 document.getElementById("myArray").innerHTML = fruits.toString();
 document.getElementById("myString1").innerHTML = typeof (fruits.toString());
+
+
+// Numeric Sort
+const points = [40, 100, 1, 5, 25, 10];
+const points1 = [40, 100, 1, 5, 25, 10];
+document.getElementById("numericSort").innerHTML = points;
+
+points.sort(function (a, b) {return a - b});
+document.getElementById("ascendingOrder").innerHTML = points;
+
+points1.sort(function (a, b) {return b - a});
+document.getElementById("descendingOrder").innerHTML = points1;
+
+function randomSort() {
+    const points2 = [40, 100, 1, 5, 25, 10];
+    points2.sort(function (a, b) {return 0.5 - Math.random()});
+    document.getElementById("randomOrder").innerHTML = points2;
+}
