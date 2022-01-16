@@ -98,3 +98,22 @@ function myMap(value, index, array) {
 }
 
 document.getElementById("map").innerHTML = num1; */
+
+
+// Array find()
+const ages = [3, 10, 18, 20, 21, 5, 30, 35];
+document.getElementById("find").innerHTML = ages;
+document.getElementById("find1").innerHTML = ages.find(myFind);
+
+function myFind(ages) {
+    return ages > 18;
+}
+
+
+// Array findIndex()
+document.getElementById("findIndex").innerHTML = ages;
+document.getElementById("findIndex1").innerHTML = ages.findIndex(myFindIndex);
+
+function myFindIndex(ages) {
+    return ages > 18;
+}
