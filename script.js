@@ -39,3 +39,9 @@ for (const i of tags) {
 
 html += `</ul>`;
 document.getElementById("myTemplates").innerHTML = html;
+
+
+// Converting Arrays to Strings
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("myArray").innerHTML = fruits.toString();
+document.getElementById("myString1").innerHTML = typeof (fruits.toString());
