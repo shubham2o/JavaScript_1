@@ -117,3 +117,13 @@ document.getElementById("findIndex1").innerHTML = ages.findIndex(myFindIndex);
 function myFindIndex(ages) {
     return ages > 18;
 }
+
+
+// JavaScript Boolean as Objects
+// boolX is a boolean
+let boolX = false;
+
+// boolY is an object
+let boolY = new Boolean(false);
+
+document.getElementById("boolean").innerHTML = typeof boolX + "<br>" + typeof boolY;
