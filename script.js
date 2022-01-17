@@ -307,3 +307,33 @@ var hello;
 hello = () => "Hello World!";
 
 document.getElementById("arrowFunc").innerHTML = hello();
+
+
+// Using a Class
+class Car {
+    constructor(name, year) {
+        this.name = name;
+        this.year = year;
+    }
+}
+
+const myCar = new Car("Ford", 2014);
+
+document.getElementById("myClass").innerHTML = 
+myCar.name + " - " + myCar.year;
+
+class Vehicle {
+    constructor(name, year) {
+        this.name = name;
+        this.year = year;
+    }
+    age() {
+        let date = new Date();
+        return date.getFullYear() - this.year;
+    }
+}
+
+const myVehicle = new Vehicle("Ford", 2014);
+
+document.getElementById("myClass1").innerHTML = 
+myVehicle.name + " - " + myVehicle.year + " - " + myVehicle.age() + " years old.";
