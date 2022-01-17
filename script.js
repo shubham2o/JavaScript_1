@@ -164,3 +164,28 @@ for (const x of cars) {
 }
 
 document.getElementById("forOf").innerHTML = ghi;
+
+
+// Javascript While Loop
+let text1 = "";
+
+let jkl = 0;
+while (jkl < 10) {
+    text1 += jkl + "<br>";
+    jkl++;
+}
+
+document.getElementById("whileLoop").innerHTML = text1;
+
+
+// Javascript Do While Loop
+let text2 = "";
+
+let mno = 0;
+do {
+    text2 += mno + "<br>";
+    mno++;
+}
+while (mno < 10);
+
+document.getElementById("doWhile").innerHTML = text2;
