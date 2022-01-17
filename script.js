@@ -215,3 +215,18 @@ for (let i = 0; i < 10; i++) {
 }
 
 document.getElementById("continueSt").innerHTML = text4;
+
+
+// JavaScript Labels
+const cars1 = ["BMW", "Volvo", "Saab", "Ford"];
+let text5 = "";
+
+list : {
+    text5 += cars[0] + "<br>";
+    text5 += cars[1] + "<br>";
+    break list;
+    text5 += cars[2] + "<br>";
+    text5 += cars[3] + "<br>";
+}
+
+document.getElementById("jsLabel").innerHTML = text5;
