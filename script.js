@@ -230,3 +230,35 @@ list : {
 }
 
 document.getElementById("jsLabel").innerHTML = text5;
+
+
+// Javascript Sets
+const letters = new Set(["a", "b", "c"]);   // Create a Set
+document.getElementById("sets").innerHTML = letters.size;   // Display set size
+
+const letters1 = new Set();     // Create a set and add values:
+letters1.add("a");   // Add values
+letters1.add("b");
+letters1.add("c");
+document.getElementById("addValues").innerHTML = letters1.size;
+
+const letters2 = new Set();     // Create a set and add values to the variables:
+const a = "a";   // Create variables
+const b = "b";
+const c = "c";
+letters2.add(a);    // Add the values to the set
+letters2.add(b);
+letters2.add(c);
+document.getElementById("addValues1").innerHTML = letters2.size;
+
+
+// The values() Method
+const letters3 = new Set(["a", "b", "c"]);
+
+// List all elements
+let text6 = "";
+for (const x of letters3.values()) {
+    text6 += x + "<br>";
+}
+
+document.getElementById("valuesMethod").innerHTML = text6;
