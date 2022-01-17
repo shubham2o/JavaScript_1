@@ -153,3 +153,14 @@ for (const x in numbers2) {
 }
 
 document.getElementById("forInArrays").innerHTML = def;
+
+
+// Javascript For Of Loop
+const cars = ["BMW", "Volvo", "Mini"];
+let ghi = "";
+
+for (const x of cars) {
+    ghi += x + "<br>";
+}
+
+document.getElementById("forOf").innerHTML = ghi;
