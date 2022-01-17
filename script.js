@@ -127,3 +127,29 @@ let boolX = false;
 let boolY = new Boolean(false);
 
 document.getElementById("boolean").innerHTML = typeof boolX + "<br>" + typeof boolY;
+
+
+// JavaScript For In Loop ~ Over Objects
+const person = {
+    fname : "John",
+    lname : "Doe",
+    age : 25
+};
+
+let abc = "";
+for(let x in person) {
+    abc += person[x] + "<br>"; 
+}
+
+document.getElementById("forInObjects").innerHTML = abc;
+
+
+// Javascript For In Loop ~ Over Arrays
+const numbers2 = [45, 4, 9, 16, 25];
+let def = "";
+
+for (const x in numbers2) {
+    def += numbers2[x] + "<br>";
+}
+
+document.getElementById("forInArrays").innerHTML = def;
