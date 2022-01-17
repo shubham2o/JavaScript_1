@@ -251,14 +251,41 @@ letters2.add(b);
 letters2.add(c);
 document.getElementById("addValues1").innerHTML = letters2.size;
 
-
-// The values() Method
-const letters3 = new Set(["a", "b", "c"]);
-
-// List all elements
-let text6 = "";
+const letters3 = new Set(["a", "b", "c"]);   // The values() Method
+let text6 = "";    // List all elements
 for (const x of letters3.values()) {
     text6 += x + "<br>";
 }
-
 document.getElementById("valuesMethod").innerHTML = text6;
+
+
+// JavaScript Maps
+const fruits1 = new Map([   // Create a Map
+    ["apples", 500],
+    ["bananas", 300],
+    ["oranges", 200]
+]);
+document.getElementById("maps").innerHTML = fruits1.get("apples");
+
+const fruits2 = new Map();
+fruits2.set("apples", 500);   // Set Map values
+fruits2.set("bananas", 300);
+fruits2.set("oranges", 200);
+document.getElementById("mapSet").innerHTML = fruits2.get("apples");
+
+document.getElementById("mapDelete").innerHTML = fruits2.size;
+document.getElementById("mapDelete1").innerHTML = fruits2.get("apples");
+fruits2.delete("apples");   // The delete() method
+document.getElementById("mapDelete2").innerHTML = fruits2.size;
+document.getElementById("mapDelete3").innerHTML = fruits2.get("apples");
+
+const fruits3 = new Map([   // The entries() method
+    ["apples", 500],
+    ["bananas", 300],
+    ["oranges", 200]
+]);
+let text7 = "";
+for(const x of fruits3.entries()) {
+    text7 += x + "<br>";
+}
+document.getElementById("mapEntries").innerHTML = text7;
