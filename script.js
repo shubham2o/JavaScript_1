@@ -300,3 +300,10 @@ false.constructor + "<br>" +
 {name : "john", age : 34}.constructor + "<br>" +
 new Date().constructor + "<br>" + 
 function(){}.constructor;
+
+
+// Arrow Function
+var hello;
+hello = () => "Hello World!";
+
+document.getElementById("arrowFunc").innerHTML = hello();
