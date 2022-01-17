@@ -289,3 +289,14 @@ for(const x of fruits3.entries()) {
     text7 += x + "<br>";
 }
 document.getElementById("mapEntries").innerHTML = text7;
+
+
+// The Constructor Property
+document.getElementById("myConstructor").innerHTML = 
+"John".constructor + "<br>" +
+(3.14).constructor + "<br>" +
+false.constructor + "<br>" + 
+[1, 2, 3, 4, 5].constructor + "<br>" + 
+{name : "john", age : 34}.constructor + "<br>" +
+new Date().constructor + "<br>" + 
+function(){}.constructor;
