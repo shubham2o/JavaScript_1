@@ -189,3 +189,29 @@ do {
 while (mno < 10);
 
 document.getElementById("doWhile").innerHTML = text2;
+
+
+// The Break Statement
+let text3 = "";
+
+for (let i = 0; i < 10; i++) {
+    if (i === 3) {
+        break;
+    }
+    text3 += i + "<br>";
+}
+
+document.getElementById("breakSt").innerHTML = text3;
+
+
+// The Continue Statement
+let text4 = "";
+
+for (let i = 0; i < 10; i++) {
+    if (i === 3) {
+        continue;
+    }
+    text4 += i + "<br>";
+}
+
+document.getElementById("continueSt").innerHTML = text4;
