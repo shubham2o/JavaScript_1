@@ -353,10 +353,10 @@ var person2 = {
     firstName : "John",
     lastName : "Doe",
     language : "NO",
-    get lang() {
+    get lang() {    // get
         return this.language;
     },
-    set lang(value) {
+    set lang(value) {   // set
         this.language = value;
     }
 };
