@@ -362,3 +362,14 @@ var person2 = {
 };
 person2.lang = "English" // Set an object property using a setter 
 document.getElementById("myGetSet").innerHTML = person2.lang;
+
+var person3 = {
+    firstName : "John",
+    lastName : "Doe",
+    language : "NO",
+    set lang(value) {
+        this.language = value.toUpperCase();
+    }
+}
+person3.lang = "english";
+document.getElementById("mySet").innerHTML = person3.language;
