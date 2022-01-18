@@ -367,7 +367,7 @@ var person3 = {
     firstName : "John",
     lastName : "Doe",
     language : "NO",
-    set lang(value) {
+    set lang(value) {   // set
         this.language = value.toUpperCase();
     }
 }
