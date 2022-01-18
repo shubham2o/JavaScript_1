@@ -348,3 +348,17 @@ var person1 = {     // Create an object
     }
 };
 document.getElementById("myGet").innerHTML = person1.fullName;  // Display
+
+var person2 = {
+    firstName : "John",
+    lastName : "Doe",
+    language : "NO",
+    get lang() {
+        return this.language;
+    },
+    set lang(value) {
+        this.language = value;
+    }
+};
+person2.lang = "English" // Set an object property using a setter 
+document.getElementById("myGetSet").innerHTML = person2.lang;
