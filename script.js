@@ -343,7 +343,7 @@ myVehicle.name + " - " + myVehicle.year + " - " + myVehicle.age() + " years old.
 var person1 = {     // Create an object
     firstName : "John",
     lastName : "Doe",
-    get fullName() {
+    get fullName() {    // get
         return this.firstName + " " + this.lastName;
     }
 };
