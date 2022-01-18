@@ -337,3 +337,14 @@ const myVehicle = new Vehicle("Ford", 2014);
 
 document.getElementById("myClass1").innerHTML = 
 myVehicle.name + " - " + myVehicle.year + " - " + myVehicle.age() + " years old.";
+
+
+// Property Getters and Setters
+var person1 = {     // Create an object
+    firstName : "John",
+    lastName : "Doe",
+    get fullName() {
+        return this.firstName + " " + this.lastName;
+    }
+};
+document.getElementById("myGet").innerHTML = person1.fullName;  // Display
