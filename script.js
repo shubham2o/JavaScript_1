@@ -443,3 +443,24 @@ for (let i in myObj.cars) {
 }
 
 document.getElementById("nested").innerHTML = text9;
+
+
+// Stringify Functions
+const person6 = {
+    name : "John",
+    age : function() {
+        return 30;
+    }
+}
+let myString = JSON.stringify(person6);
+document.getElementById("stringify").innerHTML = myString;
+
+const person7 = {
+    name : "John",
+    age : function () {
+        return 30;
+    }
+}
+person7.age = person7.age().toString();
+let myString1 = JSON.stringify(person7);
+document.getElementById("stringify1").innerHTML = myString1;
