@@ -373,3 +373,24 @@ var person3 = {
 }
 person3.lang = "english";
 document.getElementById("mySet").innerHTML = person3.language;
+
+
+// JavaScript Object Entries
+const fruits4 = {
+    Bananas : 300,
+    Oranges : 200,
+    Apples : 100
+};
+let text8 = "";
+for (let [fruit, amount] of Object.entries(fruits4)) {
+    text8 += fruit + " : " + amount + "<br>";
+}
+document.getElementById("objEntries").innerHTML = text8;
+
+const person4 = {
+    firstName : "John",
+    lastName : "Doe",
+    age : 50,
+    eyeColor : "Blue"
+};
+document.getElementById("objEntries1").innerHTML = Object.entries(person4) instanceof Array;
