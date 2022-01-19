@@ -411,3 +411,35 @@ document.getElementById("objMutable").innerHTML = person5.age;
 document.getElementById("objMutable1").innerHTML = dob.age;
 document.getElementById("objMutable2").innerHTML = person5;
 document.getElementById("objMutable3").innerHTML = dob;
+
+
+// Nested Arrays and Objects
+let text9 = "";
+
+const myObj = {
+    name : "John",
+    age : 30,
+    cars : [
+        {
+            name : "Ford",
+            models : ["Fiesta", "Focus", "Mustang"]
+        },
+        {
+            name : "BMW",
+            models : ["320", "X3", "X5"]
+        },
+        {
+            name : "Fiat",
+            models : ["500", "Panda"]
+        }
+    ]
+};
+
+for (let i in myObj.cars) {
+    text9 += "<h2><u>" + myObj.cars[i].name + "</u></h2>";
+    for (let j in myObj.cars[i].models) {
+        text9 += myObj.cars[i].models[j] + "<br>";
+    }
+}
+
+document.getElementById("nested").innerHTML = text9;
