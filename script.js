@@ -394,3 +394,20 @@ const person4 = {
     eyeColor : "Blue"
 };
 document.getElementById("objEntries1").innerHTML = Object.entries(person4) instanceof Array;
+
+
+// JavaScript Objects are Mutable
+const person5 = {
+    firstName : "John",
+    lastName : "Doe",
+    age : 50,
+    eyeColor : "Blue"
+};
+
+const dob = person5;
+dob.age = 30;
+
+document.getElementById("objMutable").innerHTML = person5.age;
+document.getElementById("objMutable1").innerHTML = dob.age;
+document.getElementById("objMutable2").innerHTML = person5;
+document.getElementById("objMutable3").innerHTML = dob;
