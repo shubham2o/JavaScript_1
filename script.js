@@ -546,6 +546,7 @@ const person9 = {
 };
 
 document.getElementById("getOwnPN").innerHTML = Object.getOwnPropertyNames(person9);
+
 document.getElementById("getOwnPN1").innerHTML = Object.keys(person9);
 
 
