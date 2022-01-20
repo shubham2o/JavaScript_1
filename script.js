@@ -536,3 +536,13 @@ document.getElementById("objDef").innerHTML = person8.language;
 Object.defineProperty(person8, "language", {value : "NO"});
 
 document.getElementById("objDef1").innerHTML = person8.language;
+
+
+// Listing All Properties
+const person9 = {
+    firstName : "John",
+    lastName : "Doe",
+    language : "EN"
+};
+
+document.getElementById("getOwnPN").innerHTML = Object.getOwnPropertyNames(person9);
