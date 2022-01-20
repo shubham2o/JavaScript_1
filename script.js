@@ -718,3 +718,28 @@ class Model1 extends Car1 {
 let myCar1 = new Model1("Ford", "Mustang");
 
 document.getElementById("myInh").innerHTML = myCar1.show();
+
+
+// JavaScript Static methods
+class Car2 {
+    constructor(name) {
+        this.name = name;
+    }
+    static hello() {
+        return "H E L L O !"
+    }
+}
+let myCar2 = new Car2("Ford");
+document.getElementById("myStatic").innerHTML = Car2.hello();       // You can call "hello()" on the Car2 Class
+// document.getElementById("myStatic1").innerHTML = myCar2.hello(); // But NOT on a Car2 Object i.e. myCar2
+
+class Car3 {
+    constructor(name) {
+        this.name = name;
+    }
+    static hello(pqr) {
+        return "G O O D B Y E ! " + pqr.name;
+    }
+}
+let myCar3 = new Car3("Ford");
+document.getElementById("myStatic2").innerHTML = Car3.hello(myCar3);
