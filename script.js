@@ -546,3 +546,16 @@ const person9 = {
 };
 
 document.getElementById("getOwnPN").innerHTML = Object.getOwnPropertyNames(person9);
+document.getElementById("getOwnPN1").innerHTML = Object.keys(person9);
+
+
+// Listing enumerable properties
+const person10 = {
+    firstName : "John",
+    lastName : "Doe",
+    language : "EN"
+};
+
+Object.defineProperty(person10, "language", {enumerable: false});
+
+document.getElementById("myEnum").innerHTML = Object.keys(person10);
