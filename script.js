@@ -743,3 +743,53 @@ class Car3 {
 }
 let myCar3 = new Car3("Ford");
 document.getElementById("myStatic2").innerHTML = Car3.hello(myCar3);
+
+
+// JavaScript Callbacks
+function myDisplayer(something) {       // Function Sequence
+    document.getElementById("mySeq").innerHTML = something;
+}
+
+function myFirst() {
+    myDisplayer("H e l l o");
+}
+
+function mySecond() {
+    myDisplayer("G o o d B y e");
+}
+
+myFirst();
+mySecond();
+
+
+// Asynchronous functions
+function myDisplayer1(something) {
+    document.getElementById("myCallbacks").innerHTML = something;
+}
+
+function myCalculator(num1, num2, myCallback) {
+    let sum = num1 + num2;
+    myCallback(sum);
+}
+
+myCalculator(5, 5, myDisplayer1);
+
+
+// SetTimeout()
+setTimeout(function() {
+    myFunction3("I am SHUBHAM");
+}, 3000)
+
+function myFunction3(value) {
+    document.getElementById("setTmt").innerHTML = value;
+}
+
+
+// Waiting for Intervals
+setInterval(myFunction4, 1000);
+
+function myFunction4() {
+    let d = new Date();
+    document.getElementById("setInt").innerHTML = 
+    d.getHours() + ":" + d.getMinutes()  + ":" + d.getSeconds();
+}

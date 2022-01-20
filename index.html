@@ -352,6 +352,30 @@
 
     <hr noshade size = "5">
 
+    <h2>JavaScript Callbacks</h2>
+    <p>A callback function is passed as an argument to another function. This technique allows a 
+        function to call another function.</p>
+    <h2>Function Sequence</h2>
+    <p>JavaScript functions are executed in the sequence they are called, NOT in the sequence they 
+        are defined.</p>
+    <p>This example will end up displaying "GoodBye".</p>
+    <p id = "mySeq"></p>
+    <p>Using a callback, you could call the calculator function(myCalculator) with a callback, and
+        let the calculator function run the callback after the calculation is finished:</p>
+    <p id = "myCallbacks"></p>
+    <p>Where callbacks really shine are in asynchronous functions, where one function has to wait 
+        for another function (like waiting for a file to load).</p>
+    <h2>Asynchronous Javascript</h2>
+    <p>Function running in parallel with other functions are asynchronous. A good example is 
+        Javascript Timeout().</p>
+    <p id = "setTmt"></p>
+    <h2>Waiting for Intervals</h2>
+    <p>When using the JavaScript function setInterval(), you can specify callback function to be
+        executed for each time.</p>
+    <p id = "setInt"></p>
+
+    <hr noshade size = "5">
+
     <script src = "script.js"></script> 
 </body>
 </html>
