@@ -594,3 +594,17 @@ function myFunction() {
 }
 
 document.getElementById("argLen").innerHTML = myFunction(0, 0, 0, 0);
+
+
+// Create a function to find the highest value in a list of numbers.
+function findMax() {
+    let max = -Infinity;
+    for (let i = 0; i < arguments.length; i++) {
+        if (arguments[i] > max) {
+            max = arguments[i];
+        }
+    }
+    return max;
+}
+
+document.getElementById("findMax").innerHTML = findMax(7, 1, 30, 5, 20);
