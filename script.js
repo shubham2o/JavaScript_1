@@ -477,3 +477,17 @@ function Person(first, last, age, eye) {
 const myFather = new Person("John", "Doe", 50, "Blue");
 
 document.getElementById("myConstructor1").innerHTML = myFather.age;
+
+
+// Using the prototype property
+function Person1 (first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+Person1.prototype.nationality = "English";
+
+const myFather1 = new Person1("John", "Doe", 50, "Blue");
+
+document.getElementById("myProto").innerHTML = myFather1.nationality;
