@@ -503,3 +503,23 @@ for (const entry of iterator) {
 }
 
 document.getElementById("myEntries").innerHTML = text10;
+
+
+// Object as Keys
+const fruits5 = new Map();
+
+const apples2 = {
+    name : "Apples"
+};
+const bananas2 = {
+    name : "Bananas"
+};
+const oranges2 = {
+    name : "Oranges"
+};
+
+fruits5.set(apples2, 500);
+fruits5.set(bananas2, 300);
+fruits5.set(oranges2, 200);
+
+document.getElementById("myKey").innerHTML = fruits5.get(apples2);
