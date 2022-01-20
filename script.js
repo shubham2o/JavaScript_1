@@ -673,3 +673,23 @@ const human8 = {
 };
 
 document.getElementById("funcApply1").innerHTML = human7.fullName.apply(human8, ["Oslo", "Norway"]);
+
+
+// JavaScript Closures
+function myFunction() {         // Global Variables
+    let a = 4;
+    return a * a;
+}
+document.getElementById("myGlobal").innerHTML = myFunction();
+
+let xyz = 5;
+function myFunction1() {
+    return xyz * xyz;
+}
+document.getElementById("myGlobal1").innerHTML = myFunction1();
+
+function myFunction2() {
+    axyz = 4;
+}
+myFunction2();
+document.getElementById("myGlobal2").innerHTML = axyz * axyz;
