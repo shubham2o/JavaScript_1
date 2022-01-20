@@ -608,3 +608,68 @@ function findMax() {
 }
 
 document.getElementById("findMax").innerHTML = findMax(7, 1, 30, 5, 20);
+
+
+// JavaScript Function Call
+const human = {
+    fullName : function() {
+        return this.firstName + " " + this.lastName;
+    }
+}
+
+const human1 = {
+    firstName : "John",
+    lastName : "Doe"
+};
+
+const human2 = {
+    firstName : "Mary",
+    lastName : "Doe"
+};
+
+document.getElementById("funcCall").innerHTML = human.fullName.call(human1);
+
+
+// The call() Method with arguments
+const human3 = {
+    fullName : function(city, country) {
+        return this.firstName + " " + this.lastName + ", " + city + ", " + country;
+    }
+}
+
+const human4 = {
+    firstName : "John",
+    lastName : "Doe"
+};
+
+document.getElementById("funcCall1").innerHTML = human3.fullName.call(human4, "Oslo", "Norway");
+
+
+// JavaScript Function Apply
+const human5 = {
+    fullName : function() {
+        return this.firstName + " " + this.lastName;
+    } 
+}
+
+const human6 = {
+    firstName : "John",
+    lastName : "Doe"
+};
+
+document.getElementById("funcApply").innerHTML = human5.fullName.apply(human6);
+
+
+// The apply() Method with arguments
+const human7 = {
+    fullName : function(city, country) {
+        return this.firstName + " " + this.lastName + ", " + city + ", " + country;
+    }
+}
+
+const human8 = {
+    firstName : "John",
+    lastName : "Doe"
+};
+
+document.getElementById("funcApply1").innerHTML = human7.fullName.apply(human8, ["Oslo", "Norway"]);
