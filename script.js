@@ -586,3 +586,11 @@ document.getElementById("myHoist").innerHTML = myFunction(5);
 function myFunction(y) {
     return y * y;
 }
+
+
+// arguments.length
+function myFunction() {
+    return arguments.length;
+}
+
+document.getElementById("argLen").innerHTML = myFunction(0, 0, 0, 0);
