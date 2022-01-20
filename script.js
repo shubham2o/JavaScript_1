@@ -693,3 +693,28 @@ function myFunction2() {
 }
 myFunction2();
 document.getElementById("myGlobal2").innerHTML = axyz * axyz;
+
+
+// Class Inheritance
+class Car1 {
+    constructor(brand) {
+        this.brand = brand;
+    }
+    present() {
+        return "I have a " + this.brand;
+    }
+}
+
+class Model1 extends Car1 {
+    constructor(brand, mod) {
+        super (brand);
+        this.model = mod;
+    }
+    show() {
+    return this.present() + ", it is a " + this.model + ".";
+    }
+}
+
+let myCar1 = new Model1("Ford", "Mustang");
+
+document.getElementById("myInh").innerHTML = myCar1.show();
