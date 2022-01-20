@@ -464,3 +464,16 @@ const person7 = {
 person7.age = person7.age().toString();
 let myString1 = JSON.stringify(person7);
 document.getElementById("stringify1").innerHTML = myString1;
+
+
+// JavaScript Object Constructors
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye
+}
+
+const myFather = new Person("John", "Doe", 50, "Blue");
+
+document.getElementById("myConstructor1").innerHTML = myFather.age;
