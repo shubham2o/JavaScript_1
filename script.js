@@ -572,3 +572,17 @@ const person11 = {
 Object.defineProperty(person11, "year", {value : "2022"});
 
 document.getElementById("objDef2").innerHTML = person11.year;
+
+
+// Self Invoking Functions
+(function () {
+    document.getElementById("myInvoke").innerHTML = "Kitty, kitty, kitty!";
+})();
+
+
+// Function Hoisting
+document.getElementById("myHoist").innerHTML = myFunction(5);
+
+function myFunction(y) {
+    return y * y;
+}
