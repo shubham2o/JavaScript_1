@@ -793,3 +793,99 @@ function myFunction4() {
     document.getElementById("setInt").innerHTML = 
     d.getHours() + ":" + d.getMinutes()  + ":" + d.getSeconds();
 }
+
+
+// JavaScript Promise Object
+function myDisplay(something) {
+    document.getElementById("myPromise").innerHTML = something;
+}
+
+let myPromise = new Promise(function(resolve, reject) {
+    let x = 0;
+    // some code (try to change x to 5)
+    if (x == 0) {
+        resolve("O K");
+    }
+    else {
+        reject("E R R O R");
+    }
+});
+
+myPromise.then(
+    function(value) {
+        myDisplay(value);
+    },
+    function (error) {
+        myDisplay(error);
+    }
+);
+
+
+// Example using Promise
+const myPromise1 = new Promise(function(resolve, reject) {
+    setTimeout(function() {
+        resolve("I am S H U B H A M");
+    }, 3000);
+});
+
+myPromise1.then(
+    function(value) {
+        document.getElementById("myPromise1").innerHTML = value;
+    }
+)
+
+
+// Async / Await
+async function myFunction5() {
+    return "Hello";
+}
+
+/* Is the same as :
+function myFunction5() {
+    return Promise.resolve("Hello");
+}*/
+
+document.getElementById("myAsync").innerHTML = myFunction5();
+
+
+// Here is how to use Promise
+function myDisplay1(something) {
+    document.getElementById("myAsync1").innerHTML = something; 
+}
+
+async function myFunction6() {
+    return "H E L L O";
+}
+
+myFunction6().then(
+    function(value) {
+        myDisplay1(value);
+    },
+    function(error) {
+        myDisplay1(error);
+    }
+)
+
+
+// Await Syntax
+async function myDisplay2() {
+    let myPro = new Promise(function(resolve, reject) {
+        resolve("I am S H U B H A M");
+    });
+    document.getElementById("myAwait").innerHTML = await myPro;
+}
+
+myDisplay2();
+
+
+// Waiting for Timeout
+async function myDisplay3() {
+    let myPro1 = new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            resolve("I am S H U B H A M - S H A R M A");
+        }, 3000);
+    });
+    document.getElementById("myAwait1").innerHTML = await myPro1;
+}
+
+myDisplay3();
