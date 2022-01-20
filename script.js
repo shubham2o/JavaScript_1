@@ -523,3 +523,16 @@ fruits5.set(bananas2, 300);
 fruits5.set(oranges2, 200);
 
 document.getElementById("myKey").innerHTML = fruits5.get(apples2);
+
+
+// Changing a Property Values
+const person8 = {
+    firstName : "John",
+    lastName : "Doe", 
+    language : "EN"
+};
+
+document.getElementById("objDef").innerHTML = person8.language;
+Object.defineProperty(person8, "language", {value : "NO"});
+
+document.getElementById("objDef1").innerHTML = person8.language;
