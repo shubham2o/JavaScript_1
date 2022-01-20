@@ -560,3 +560,15 @@ const person10 = {
 Object.defineProperty(person10, "language", {enumerable: false});
 
 document.getElementById("myEnum").innerHTML = Object.keys(person10);
+
+
+// Adding a Property
+const person11 = {
+    firstName : "John",
+    lastName : "Doe",
+    language : "EN"
+};
+
+Object.defineProperty(person11, "year", {value : "2022"});
+
+document.getElementById("objDef2").innerHTML = person11.year;
