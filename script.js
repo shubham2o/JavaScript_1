@@ -491,3 +491,15 @@ Person1.prototype.nationality = "English";
 const myFather1 = new Person1("John", "Doe", 50, "Blue");
 
 document.getElementById("myProto").innerHTML = myFather1.nationality;
+
+
+// The entries() Method
+const letters4 = new Set(["a", "b", "c"]);
+const iterator = letters4.entries();
+
+let text10 = "";
+for (const entry of iterator) {
+    text10 += entry + "<br>";
+}
+
+document.getElementById("myEntries").innerHTML = text10;
