@@ -957,3 +957,14 @@ function myRemove1() {
     const child1 = document.getElementById("id19");
     parent1.removeChild(child1);
 }
+
+
+// Replacing HTML Elements
+function myReplace() {
+    const parent2 = document.getElementById("div4");
+    const child2 = document.getElementById("id21");
+    const para5 = document.createElement("p");
+    const node3 = document.createTextNode("This is new.");
+    para5.appendChild(node3);
+    parent2.replaceChild(para5, child2);
+}
