@@ -935,3 +935,13 @@ para1.appendChild(node1);
 
 const para2 = document.getElementById("div1");
 para2.appendChild(para1);
+
+
+// Creating new HTML Elements - insertBefore()
+const para3 = document.createElement("p");
+const node2 = document.createTextNode("This is new.");
+para3.appendChild(node2);
+
+const para4 = document.getElementById("div2");
+const child = document.getElementById("id15");
+para4.insertBefore(para3, child);
