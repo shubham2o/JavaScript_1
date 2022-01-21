@@ -464,6 +464,25 @@
 
     <hr noshade size = "5">
 
+    <h2>Removing existing HTML elements</h2>
+    <h2>remove()</h2>
+    <p>To remove an HTML element, use the remove() method:</p>
+    <div>
+        <p id = "id17">This is a paragraph.</p>
+        <p id = "id18">This is another paragraph.</p>
+    </div>
+    <button onclick = "myRemove()">Remove Element</button>
+    <h2>removeChild()</h2>
+    <p>For browsers that does not support the remove() method, you have to find the parent node 
+        to remove an element.</p>
+    <div id = "div3">
+        <p id = "id19">This is a paragraph.</p>
+        <p id = "id20">This is another paragraph.</p>
+    </div>
+    <button onclick = "myRemove1()">Remove Element</button>
+
+    <hr noshade size = "5">
+
     <script src = "script.js"></script> 
 </body>
 </html>

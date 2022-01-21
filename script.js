@@ -945,3 +945,15 @@ para3.appendChild(node2);
 const para4 = document.getElementById("div2");
 const child = document.getElementById("id15");
 para4.insertBefore(para3, child);
+
+
+// Removing existing HTML elements 
+function myRemove() {
+    document.getElementById("id17").remove();
+}
+
+function myRemove1() {
+    const parent1 = document.getElementById("div3");
+    const child1 = document.getElementById("id19");
+    parent1.removeChild(child1);
+}
