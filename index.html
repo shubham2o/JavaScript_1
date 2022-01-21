@@ -544,6 +544,31 @@
     <br><br>
     <hr noshade size = "5">
 
+    <h2>JavaScript Window Navigator</h2>
+    <p>The window.navigator object contains information about the visitor's browser.</p>
+
+    <hr noshade size = "5">
+
+    <h2>Create a Cookie with javascript</h2>
+    <p>1. JavaScript can create, read and delete cookies with the document.cookie property.</p>
+    <p>2. With JS, a cookie can be created like this: <br> document.cookie = "username = John Doe";</p>
+    <p>3. You can also add an expiry date (in UTC time). By default, the cookie is deleted when the 
+        browser is closed: 
+        <br> document.cookie = "username = John Doe; expires = Thu, 18 Feb 2022";
+    </p>
+    <p>4. With a path parameter, you can tell the browser what path the cookie belongs to. By default,
+        the cookie belongs to the current page.
+        <br> document.cookie = "username = John Doe; expires = Thu, 18 Feb 2022; path = /";
+    </p>
+
+    <hr noshade size = "5">
+
+    <h2>Delete a cookie with JavaScript</h2>
+    <p>Deleting a cookie is very simple. You don't have to specify the cookie value when you delete 
+        a cookie.</p> 
+    <p>Just set the expires parameter to a past date.
+        <br> document.cookie = "username = John Doe; expires = Thu, 26 Sept 1980; path = /";
+    </p>
     <script src = "script.js"></script> 
 </body>
 </html>
