@@ -975,3 +975,17 @@ function myHTMLCol() {
     const myCollection = document.getElementsByTagName("p");
     document.getElementById("id23").innerHTML = myCollection[1].innerHTML;
 }
+
+
+// The HTMLCollection Length
+function myLen() {
+    const myCollection1 = document.getElementsByTagName("p");
+    document.getElementById("id24").innerHTML = myCollection1.length;
+}
+
+function myLen1() {
+    const myCollection2 = document.getElementsByTagName("p");
+    for (let i = 0; i < myCollection2.length; i++) {
+        myCollection2[i].style.color = "red";
+    }
+}
