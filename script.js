@@ -914,10 +914,10 @@ document.getElementById("id04").innerHTML = document.getElementById("id03").firs
 document.getElementById("id06").innerHTML = document.getElementById("id05").childNodes[0].nodeValue;
 
 
-// DOM Root Nodes
+/*// DOM Root Nodes
 document.getElementById("id07").innerHTML = document.body.innerHTML;
 
-document.getElementById("id08").innerHTML = document.documentElement.innerHTML;
+document.getElementById("id08").innerHTML = document.documentElement.innerHTML;*/
 
 
 // The nodeName Property
@@ -926,3 +926,12 @@ document.getElementById("id10").innerHTML = document.getElementById("id09").node
 
 // The nodeType Property
 document.getElementById("id12").innerHTML = document.getElementById("id11").nodeType;
+
+
+// Creating New HTML ELements (Nodes)
+const para1 = document.createElement("p");
+const node1 = document.createTextNode("This is new.");
+para1.appendChild(node1);
+
+const para2 = document.getElementById("div1");
+para2.appendChild(para1);
