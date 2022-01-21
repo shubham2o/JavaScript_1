@@ -904,3 +904,17 @@ const element3 = element2.getElementsByTagName("p");
 
 document.getElementById("myTagName1").innerHTML = 
 "This first paragraph (index 0) inside 'main' is : " + element3[0].innerHTML;
+
+
+// Child Nodes and Node Values
+document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;
+
+document.getElementById("id04").innerHTML = document.getElementById("id03").firstChild.nodeValue;
+
+document.getElementById("id06").innerHTML = document.getElementById("id05").childNodes[0].nodeValue;
+
+
+// DOM Root Nodes
+document.getElementById("id07").innerHTML = document.body.innerHTML;
+
+document.getElementById("id08").innerHTML = document.documentElement.innerHTML;
