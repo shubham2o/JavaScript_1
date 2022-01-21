@@ -989,3 +989,9 @@ function myLen1() {
         myCollection2[i].style.color = "red";
     }
 }
+
+
+// Window Location Assign
+function newDoc() {
+    window.location.assign("https://www.w3schools.com");
+}
