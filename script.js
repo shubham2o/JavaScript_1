@@ -918,3 +918,11 @@ document.getElementById("id06").innerHTML = document.getElementById("id05").chil
 document.getElementById("id07").innerHTML = document.body.innerHTML;
 
 document.getElementById("id08").innerHTML = document.documentElement.innerHTML;
+
+
+// The nodeName Property
+document.getElementById("id10").innerHTML = document.getElementById("id09").nodeName;
+
+
+// The nodeType Property
+document.getElementById("id12").innerHTML = document.getElementById("id11").nodeType;
