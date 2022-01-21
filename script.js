@@ -968,3 +968,10 @@ function myReplace() {
     para5.appendChild(node3);
     parent2.replaceChild(para5, child2);
 }
+
+
+// The HTMLCollection Object
+function myHTMLCol() {
+    const myCollection = document.getElementsByTagName("p");
+    document.getElementById("id23").innerHTML = myCollection[1].innerHTML;
+}
