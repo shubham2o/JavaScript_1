@@ -889,3 +889,18 @@ async function myDisplay3() {
 }
 
 myDisplay3();
+
+
+// Finding HTML Element by Tag Name
+const element1 = document.getElementsByTagName("p");
+
+document.getElementById("myTagName").innerHTML = 
+"The text in the first paragraph (index 0) is : " + element1[0].innerHTML;
+
+
+// This example finds the element with id = "myTagName1" and then finds all p elements inside "main" :
+const element2 = document.getElementById("main1");
+const element3 = element2.getElementsByTagName("p");
+
+document.getElementById("myTagName1").innerHTML = 
+"This first paragraph (index 0) inside 'main' is : " + element3[0].innerHTML;
