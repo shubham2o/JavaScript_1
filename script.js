@@ -1081,3 +1081,74 @@ async function getText(file) {
     let y = await x.text();
     document.getElementById("id34").innerHTML = y;
 }
+
+
+// Using the Geolocation API
+const loc = document.getElementById("id35");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    }
+    else {
+        loc.innerHTML = "Geolocation is not supported by this browser";
+    }
+}
+
+function showPosition(position) {
+    loc.innerHTML = 
+    "Latitude : " + position.coords.latitude + "<br> Longitude : " + position.coords.longitude;
+}
+
+
+// Handling Errors and Rejections
+const loc1 = document.getElementById("id36");
+
+function getLocation1() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition1, showError1);
+    }
+    else {
+        loc1.innerHTML = "Geolocation is not supported in this browser.";
+    }
+}
+
+function showPosition1(position1) {
+    loc1.innerHTML = 
+    "Latitude : " + position1.coords.latitude + "<br> Longitude : " + position1.coords.longitude;
+}
+
+function showError1(error) {
+    switch (error.code) {
+        case error.PERMISSION_DENIED: 
+            loc1.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            loc1.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            loc1.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            loc1.innerHTML = "An unknown error occurred."
+            break;
+    }
+}
+
+
+// Geolocation Object - Other interesting methods
+const loc2 = document.getElementById("id37");
+
+function getLocation2() {
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(showPosition2);
+    }
+    else {
+        loc2.innerHTML = "Geolocation is not supported by this browser."
+    }
+}
+
+function showPosition2(position2) {
+    loc2.innerHTML = 
+    "Latitude : " + position2.coords.latitude + "<br> Longitude : " + position2.coords.longitude;
+}

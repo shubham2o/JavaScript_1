@@ -660,6 +660,36 @@
 
     <hr noshade size = "5">
 
+    <h2>Using the Geolocation API</h2>
+    <p>The getCurrentPosition() method is used to return the user's position. <br> The example below
+    returns the latitude and longitude of the user's position:</p>
+    <button onclick = "getLocation()">Try it</button>
+    <p id = "id35"></p>
+
+    <hr noshade size = "5">
+
+    <h2>Handling Errors and Rejections</h2>
+    <p>The second parameter of the getCurrentPositon() method is used to handle errors. <br> It specifies
+        a function to run if it fails to get the user's location:</p>
+    <p>Click the button to get your coordinates.</p>
+    <button onclick = "getLocation1()">Try it</button>
+    <p id = "id36"></p>
+
+    <hr noshade size = "5">
+
+    <h2>Gelocation Object - Other interesting methods</h2>
+    <p>The geolocation object also has other interesting methods:</p>
+    <p><b>1. watchPostion() </b><br> Returns the current position of the user and continues to return 
+    updated position as the user moves (like the GPS in a car).</p>
+    <p><b>2. clearWatch() </b><br> Stops the watchPostion() method.</p>
+    <p>The example below shows the watchPosition() method. You need an accurate GPS device to test
+        this (like smartphone):</p>
+    <p>Click the button to get your coordinates.</p>
+    <button onclick = "getLocation2()">Try it</button>
+    <p id = "id37"></p>
+
+    <hr noshade size = "5">
+
     <script src = "script.js"></script> 
 </body>
 </html>
