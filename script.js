@@ -1067,3 +1067,17 @@ document.getElementById("id31").innerHTML = localStorage.getItem("name");
 // The sessionStorage Object
 sessionStorage.setItem("name", "John Doe");
 document.getElementById("id32").innerHTML = sessionStorage.getItem("name");
+
+
+// JavaScript Fetch API
+let file = "fetch_info.txt";
+fetch (file)
+.then(x => x.text())
+.then(y => document.getElementById("id33").innerHTML = y)
+
+getText("fetch_info.txt");
+async function getText(file) {
+    let x = await fetch(file);
+    let y = await x.text();
+    document.getElementById("id34").innerHTML = y;
+}

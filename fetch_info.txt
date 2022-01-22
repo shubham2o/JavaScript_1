@@ -1,0 +1,2 @@
+The fetch API interface allows web browser to make HTTP requests to web servers.
+If you use the XMLHttpRequest object, Fetch can do the same in a simpler way.
