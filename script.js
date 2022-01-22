@@ -1152,3 +1152,14 @@ function showPosition2(position2) {
     loc2.innerHTML = 
     "Latitude : " + position2.coords.latitude + "<br> Longitude : " + position2.coords.longitude;
 }
+
+
+// The XMLHttpRequest Object
+function loadDoc() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        document.getElementById("div5").innerHTML = this.responseText;
+    }
+    xhttp.open("GET", "ajax_info.txt");
+    xhttp.send();
+}
