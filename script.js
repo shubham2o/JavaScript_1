@@ -1163,3 +1163,14 @@ function loadDoc() {
     xhttp.open("GET", "ajax_info.txt");
     xhttp.send();
 }
+
+
+// The onreadystatechange property
+function loadDoc1() {
+    const xhttp1 = new XMLHttpRequest();
+    xhttp1.onreadystatechange = function() {
+        document.getElementById("div6").innerHTML = this.responseText;
+    }
+    xhttp1.open("GET", "ajax_info.txt");
+    xhttp1.send();
+}

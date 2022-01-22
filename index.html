@@ -707,7 +707,18 @@
     <hr noshade size = "5">
 
     <h2>The onreadystatechange Property</h2>
-    
+    <p>The readyState property holds the status of XMLHttpRequest.</p>
+    <p>The onreadystatechange property defines a callback function to be executed when the readyState 
+        changes. <br> The status property and the statusText properties hold the status of the 
+        XMLHttpRequest() Object. The onreadystatechange function is called every time the readyState 
+        changes.</p>
+    <p>When readyState is 4 and status is 200, the response is ready:</p>
+    <div id = "div6">
+        <button onclick = "loadDoc1()">Change Content</button>
+    </div>
+
+    <br>
+    <hr noshade size = "5">
 
     <script src = "script.js"></script> 
 </body>
