@@ -1214,3 +1214,25 @@ function loadDoc5() {
     xhttp5.open("POST", "ajax_info.txt")
     xhttp5.send();
 }
+
+
+// The getAllResponseHeaders() Method
+function myHeader() {
+    const xhttp6 = new XMLHttpRequest();
+    xhttp6.onload = function () {
+        document.getElementById("id38").innerHTML = this.getAllResponseHeaders();
+    }
+    xhttp6.open("GET", "ajax_info.txt");
+    xhttp6.send();
+}
+
+
+// The getResponseHeader() Method
+function myHeader1 () {
+    const xhttp7 = new XMLHttpRequest();
+    xhttp7.onload = function () {
+        document.getElementById("id39").innerHTML = this.getResponseHeader("Last-Modified");
+    }
+    xhttp7.open("GET", "ajax_info.txt");
+    xhttp7.send();
+}
