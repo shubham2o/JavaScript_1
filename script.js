@@ -1057,3 +1057,13 @@ function myForward() {
 function myGo() {
     window.history.go(-2);
 }
+
+
+// The localStorage Object
+localStorage.setItem("name", "John Doe");
+document.getElementById("id31").innerHTML = localStorage.getItem("name");
+
+
+// The sessionStorage Object
+sessionStorage.setItem("name", "John Doe");
+document.getElementById("id32").innerHTML = sessionStorage.getItem("name");
