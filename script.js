@@ -1039,3 +1039,21 @@ function myRangeUnderflow() {
     }
     document.getElementById("id30").innerHTML = myObj2;
 }
+
+
+// The History back() Method
+function myBack() {
+    window.history.back();
+}
+
+
+// The History forward() Method
+function myForward() {
+    window.history.forward();
+}
+
+
+// The History go() Method
+function myGo() {
+    window.history.go(-2);
+}
