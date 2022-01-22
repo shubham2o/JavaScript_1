@@ -995,3 +995,41 @@ function myLen1() {
 function newDoc() {
     window.location.assign("https://www.w3schools.com");
 }
+
+
+// The checkValidity() Method
+function myCheckValidity() {
+    const inpObj = document.getElementById("id25");
+    if (!inpObj.checkValidity()) {
+        document.getElementById("id26").innerHTML = inpObj.validationMessage;
+    }
+    else {
+        document.getElementById("id26").innerHTML = "INPUT OK";
+    }
+}
+
+
+// The rangeOverflow Property
+function myRangeOverflow() {
+    let inpObj1;
+    if (document.getElementById("id27").validity.rangeOverflow) {
+        inpObj1 = "Value too large";
+    }
+    else {
+        inpObj1 = "INPUT OK";
+    }
+    document.getElementById("id28").innerHTML = inpObj1;
+}
+
+
+// The rangeUnderflow Property
+function myRangeUnderflow() {
+    let myObj2;
+    if (document.getElementById("id29").validity.rangeUnderflow) {
+        myObj2 = "Value too low";
+    }
+    else {
+        myObj2 = "INPUT OK";
+    }
+    document.getElementById("id30").innerHTML = myObj2;
+}

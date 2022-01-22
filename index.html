@@ -572,6 +572,39 @@
 
     <hr noshade size = "5">
 
+    <h2>The checkValidity() Method</h2>
+    <p>If an input field contain invalid data, display a message:</p>
+    <h2>JavaScript Validation</h2>
+    <p>Enter a number and click OK:</p>
+    <input type = "number" id = "id25" min = "100" max = "300" required>
+    <button onclick = "myCheckValidity()">OK</button>
+    <p>If the number is less than 100 or greater than 300, an error message will be displayed:</p>
+    <p id = "id26"></p>
+
+    <hr noshade size = "5">
+
+    <h2>The rangeOverflow Property</h2>
+    <p>If the number in an input field is greater than 100 (inputs max attribute), display a message:</p>
+    <h2>JavaScript Validation</h2>
+    <p>Enter a number and click OK:</p>
+    <input type = "number" id = "id27" max = "100" required>
+    <button onclick = "myRangeOverflow()">OK</button>
+    <p>If the number is greater than 100 (the inputs's max attribute), an error message will be displayed:</p>
+    <p id = "id28"></p>
+
+    <hr noshade size = "5">
+
+    <h2>The rangeUnderflow Property</h2>
+    <p>If the number in an input field is lower than 100 (inputs min attribute), display a message:</p>
+    <h2>JavaScript Validation</h2>
+    <p>Enter a number and click OK:</p>
+    <input type = "number" id = "id29" min = "100" required>
+    <button onclick = "myRangeUnderflow()">OK</button>
+    <p>If the number is lower than 100 (the inputs's min attribute), an error message will be displayed:</p>
+    <p id = "id30"></p>
+
+    <hr noshade size = "5">
+
     <script src = "script.js"></script> 
 </body>
 </html>
