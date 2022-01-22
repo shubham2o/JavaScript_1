@@ -1174,3 +1174,43 @@ function loadDoc1() {
     xhttp1.open("GET", "ajax_info.txt");
     xhttp1.send();
 }
+
+
+// GET Requests
+function loadDoc2() {
+    const xhttp2 = new XMLHttpRequest();
+    xhttp2.onload = function () {
+        document.getElementById("div7").innerHTML = this.responseText;
+    }
+    xhttp2.open("GET", "ajax_info.txt");
+    xhttp2.send();
+}
+
+function loadDoc3() {
+    const xhttp3 = new XMLHttpRequest();
+    xhttp3.onload = function () {
+        document.getElementById("div8").innerHTML = this.responseText;
+    }
+    xhttp3.open("GET", "ajax_info.txt?t=");
+    xhttp3.send();
+}
+
+function loadDoc4() {
+    const xhttp4 = new XMLHttpRequest();
+    xhttp4.onload = function () {
+        document.getElementById("div9").innerHTML = this.responseText;
+    }
+    xhttp4.open("GET", "ajax_info.txt?fname=Henry&lname=Ford");
+    xhttp4.send();
+}
+
+
+// POST Request
+function loadDoc5() {
+    const xhttp5 = new XMLHttpRequest();
+    xhttp5.onload = function () {
+        document.getElementById("div10").innerHTML = this.responseText;
+    }
+    xhttp5.open("POST", "ajax_info.txt")
+    xhttp5.send();
+}
