@@ -1015,6 +1015,9 @@ function myRangeOverflow() {
     if (document.getElementById("id27").validity.rangeOverflow) {
         inpObj1 = "Value too large";
     }
+    else if (!document.getElementById("id27").checkValidity()) {
+        inpObj1 = document.getElementById("id27").validationMessage;
+    }
     else {
         inpObj1 = "INPUT OK";
     }
@@ -1027,6 +1030,9 @@ function myRangeUnderflow() {
     let myObj2;
     if (document.getElementById("id29").validity.rangeUnderflow) {
         myObj2 = "Value too low";
+    }
+    else if (!document.getElementById("id29").checkValidity()) {
+        myObj2 = document.getElementById("id29").validationMessage;
     }
     else {
         myObj2 = "INPUT OK";
