@@ -824,6 +824,37 @@
 
     <hr noshade size = "5">
 
+    <h2>JSON.parse()</h2>
+    <p>A common use of JSON is to exchange data to/from a web server. When receiving data from a 
+        web server, the data is always a string. <br> Parse the data with JSON.parse() and the data 
+        become a JavaScript object. <br> Imagine we recieved this text from a web server:</p>
+    <p id = "id42"></p>
+    <p>Use the javascript object function JSON.parse() to convert the text into a JavaScript object:</p>
+    <p id = "id43"></p>
+    <h2>Array as JSON</h2>
+    <p>When using the JSON.parse() on a JSON derived from an array, the method will return a JavaScript 
+        array, instead of JavaScript object.</p>
+    <p id = "id44"></p>
+    <p id = "id45"></p>
+
+    <hr noshade size = "5">
+
+    <h2>Exceptions</h2>
+    <b>1. Parsing Dates</b>
+    <p>Date objects are not allowed in JSON. If you need to include a date, write it as a string. <br>
+    You can convert it back into a date object later:</p>
+    <p id = "id46"></p>
+    <p><b>Or you can use the second parameter of the JSON.parse() function, called reviver. </b> The 
+        reviver parameter is a function that checks each property, before returning the value:
+    </p>
+    <p id = "id47"></p>
+    <b>2. Parsing Functions</b>
+    <p>Functions are not allowed in JSON. If you need to include a function, write is as a string. <br>
+    You can convert it back into a function later:</p>
+    <p id = "id48"></p>
+
+    <hr noshade size = "5">
+
     <script src = "script.js"></script>
 </body>
 </html>

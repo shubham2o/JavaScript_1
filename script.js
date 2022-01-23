@@ -1262,3 +1262,41 @@ const myXML =
     </employee>
 </employees>`
 document.getElementById("id41").innerHTML = myXML;
+
+
+// JSON.parse()
+const myJSON1 = `'{"name" : "John", "age" : 30, "city" : "NewYork"}'`
+document.getElementById("id42").innerHTML = myJSON1;
+
+const myJSON2 = JSON.parse('{"name" : "John", "age" : 30, "city" : "NewYork"}');
+document.getElementById("id43").innerHTML = myJSON2.name;
+
+
+// Array as JSON
+const myJson3 = '["Ford", "BMW", "Audi", "Fiat"]';
+const myArr1 = JSON.parse(myJson3);
+document.getElementById("id44").innerHTML = myArr1[0];
+document.getElementById("id45").innerHTML = myArr1 instanceof Array;
+
+
+// Exceptions
+const text01 = '{"name" : "John", "birth" : "1986-12-14", "city" : "NewYork"}';
+const obj01 = JSON.parse(text01);
+obj01.birth = new Date(obj01.birth);
+document.getElementById("id46").innerHTML = obj01.name + ", " + obj01.birth;
+
+const text02 = '{"name" : "John", "birth" : "1986-12-14", "city" : "NewYork"}';
+const obj02 = JSON.parse(text02, function (key, value) {
+    if (key == "birth") {
+        return new Date (value);
+    }
+    else {
+        return value;
+    }
+});
+document.getElementById("id47").innerHTML = obj02.name + ", " + obj02.birth;
+
+const text03 = '{"name" : "John", "age" : "function() {return 30;}", "city" : "NewYork"}';
+const obj03 = JSON.parse(text03);
+obj03.age = eval("(" + obj03.age + ")");
+document.getElementById("id48").innerHTML = obj03.name + ", " + obj03.age();
