@@ -1236,3 +1236,29 @@ function myHeader1 () {
     xhttp7.open("GET", "ajax_info.txt");
     xhttp7.send();
 }
+
+
+// JSON Example
+const myJSON = 
+`{"employees" : [                                   <br>
+    {"firstName" : "John", "lastName" : "Doe"},     <br>
+    {"firstName" : "Anna", "lastName" : "Smith"},   <br>
+    {"firstName" : "Peter", "lastName" : "Griffin"} <br>
+]}`
+document.getElementById("id40").innerHTML = myJSON;
+
+
+// XML Example
+const myXML = 
+`<employees>
+    <employee>
+        <firstName>John</firstName><lastName>Doe</lastName>
+    </employee>
+    <employee>
+        <firstName>Anna</firstName><lastName>Smith</lastName>
+    </employee>
+    <employee>
+        <firstName>Peter</firstName><lastName>Griffin</lastName>
+    </employee>
+</employees>`
+document.getElementById("id41").innerHTML = myXML;
