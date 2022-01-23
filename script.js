@@ -1300,3 +1300,18 @@ const text03 = '{"name" : "John", "age" : "function() {return 30;}", "city" : "N
 const obj03 = JSON.parse(text03);
 obj03.age = eval("(" + obj03.age + ")");
 document.getElementById("id48").innerHTML = obj03.name + ", " + obj03.age();
+
+
+// JSON.stringify()
+const obj04 = {name : "John", age : 30, city : "NewYork"}; 
+const myJSON04 = JSON.stringify(obj04);
+
+document.getElementById("id49").innerHTML = myJSON04;
+
+
+// Stringify a JavaScript Array
+const arr01 = ["John", "Peter", "Sally", "Jane"];
+const myJSON05 = JSON.stringify(arr01);
+
+document.getElementById("id50").innerHTML = typeof arr01 + " => " + arr01;
+document.getElementById("id51").innerHTML = typeof myJSON05 + " => " + myJSON05;
