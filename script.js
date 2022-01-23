@@ -1315,3 +1315,24 @@ const myJSON05 = JSON.stringify(arr01);
 
 document.getElementById("id50").innerHTML = typeof arr01 + " => " + arr01;
 document.getElementById("id51").innerHTML = typeof myJSON05 + " => " + myJSON05;
+
+
+// Storing Data
+const obj05 = {name : "John", age : 31, city : "NewYork"};
+const myJSON06 = JSON.stringify(obj05);
+localStorage.setItem("testJSON", myJSON06);
+
+let text04 = localStorage.getItem("testJSON");  // Retrieving Data
+let obj06 = JSON.parse(text04);
+document.getElementById("id52").innerHTML = obj06.name;
+
+
+// Exceptions
+const obj07 = {name : "John", today : new Date(), city : "NewYork"}; 
+const myJSON07 = JSON.stringify(obj07);
+document.getElementById("id53").innerHTML = myJSON07;
+
+const obj08 = {name : "John", age : function() {return 30;}, city : "NewYork"}; 
+obj08.age = obj08.age.toString();
+const myJSON08 = JSON.stringify(obj08);
+document.getElementById("id54").innerHTML = myJSON08;
