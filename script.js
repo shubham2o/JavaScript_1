@@ -1427,3 +1427,21 @@ function convertTo24HrsFormat(time) {
     let time24hr = `${hour}:${min01}`;
     document.getElementById("id61").innerHTML = time24hr;
 }
+
+
+/* Write a function which accepts a string argument and returns the count of characters between 
+the first and last character "X". */
+const str01 = "XeroX";
+
+function getTheGap(str01) {
+    let firstIndex = str01.indexOf("X");
+    let lastIndex = str01.lastIndexOf("X");
+    let gap = lastIndex - firstIndex;
+
+    if (str01.includes("X")) {
+        document.getElementById("id62").innerHTML = gap;
+    }
+    else {
+        document.getElementById("id62").innerHTML = -1;
+    }
+}
