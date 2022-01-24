@@ -1336,3 +1336,17 @@ const obj08 = {name : "John", age : function() {return 30;}, city : "NewYork"};
 obj08.age = obj08.age.toString();
 const myJSON08 = JSON.stringify(obj08);
 document.getElementById("id54").innerHTML = myJSON08;
+
+
+// A proper random function
+function getRndInteger (min, max) {
+    let rndInt = 
+    Math.floor (Math.random() * (max - min)) + min;
+    return document.getElementById("id55").innerHTML = rndInt;
+}
+
+function getRndInteger1(min, max) {
+    let rndInt1 = 
+    Math.floor (Math.random() * (max - min + 1)) + min;
+    return document.getElementById("id56").innerHTML = rndInt1;
+}
