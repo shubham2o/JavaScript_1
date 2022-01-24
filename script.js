@@ -1339,14 +1339,48 @@ document.getElementById("id54").innerHTML = myJSON08;
 
 
 // A proper random function
-function getRndInteger (min, max) {
+function getRndInteger(min, max) {
     let rndInt = 
-    Math.floor (Math.random() * (max - min)) + min;
+    Math.floor(Math.random() * (max - min)) + min;
     document.getElementById("id55").innerHTML = rndInt;
 }
 
 function getRndInteger1(min, max) {
     let rndInt1 = 
-    Math.floor (Math.random() * (max - min + 1)) + min;
+    Math.floor(Math.random() * (max - min + 1)) + min;
     document.getElementById("id56").innerHTML = rndInt1;
+}
+
+
+// 1. Reverse a string With Built-In Functions
+function myReverse(str) {
+    // let strToArray = str.split("");
+    // let strToReverse = strToArray.reverse();
+    // let strToJoin = strToReverse.join("");
+    // return strToJoin;
+    return str
+            .split("")
+            .reverse()
+            .join("");
+}
+
+
+// 2. Reverse a String With a Decrementing For Loop
+function myReverse1(str) {
+    let newString = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+
+
+// 3. Reverse a String With Recursion
+function myReverse2(str) {
+    if (str === "") {
+        return "";
+    }
+    else {
+        return myReverse2(str.substr(1)) + str.charAt(0);
+    }
 }
