@@ -1384,3 +1384,19 @@ function myReverse2(str) {
         return myReverse2(str.substr(1)) + str.charAt(0);
     }
 }
+
+
+// Write a program to reverse a given integer number
+function reverseInt(num) {
+    // let num2Str = num.toString();
+    // let num2Arr = num2Str.split(""); 
+    // let num2Reverse = num2Arr.reverse();
+    // let num2Join = num2Reverse.join("");
+    // return parseFloat(num2Join) * Math.sign(num);
+    return parseFloat(num
+            .toString()
+            .split("")
+            .reverse()
+            .join("")
+    ) * Math.sign(num)
+}
