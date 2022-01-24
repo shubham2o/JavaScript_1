@@ -1342,11 +1342,11 @@ document.getElementById("id54").innerHTML = myJSON08;
 function getRndInteger (min, max) {
     let rndInt = 
     Math.floor (Math.random() * (max - min)) + min;
-    return document.getElementById("id55").innerHTML = rndInt;
+    document.getElementById("id55").innerHTML = rndInt;
 }
 
 function getRndInteger1(min, max) {
     let rndInt1 = 
     Math.floor (Math.random() * (max - min + 1)) + min;
-    return document.getElementById("id56").innerHTML = rndInt1;
+    document.getElementById("id56").innerHTML = rndInt1;
 }
