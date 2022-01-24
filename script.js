@@ -1403,7 +1403,10 @@ function reverseInt(num) {
 
 
 // Write a function which can convert the time input given in 12 hours format to 24 hours format
-const time = "12:10AM";
+const date01 = new Date();
+const hours01 = date01.getHours();
+const minutes01 = date01.getMinutes();
+const time = hours01 +":"+ minutes01;
 
 function convertTo24HrsFormat(time) {
     let [hour, modifier] = time.split(":");
