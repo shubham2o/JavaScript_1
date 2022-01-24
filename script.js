@@ -1400,3 +1400,27 @@ function reverseInt(num) {
             .join("")
     ) * Math.sign(num)
 }
+
+
+// Write a function which can convert the time input given in 12 hours format to 24 hours format
+const time = "12:10AM";
+
+function convertTo24HrsFormat(time) {
+    let [hour, modifier] = time.split(":");
+    let min01 = parseInt(modifier).toString().padStart(2, "0");
+    let index01 = modifier.toLowerCase().indexOf("m");
+    let meridian = modifier.slice(index01 - 1);
+    hour = parseInt(hour);
+
+    if(hour === 12) {
+        hour = 00;
+    }
+    if(meridian == "PM") {
+        hour = hour + 12;
+    }
+
+    hour = hour.toString().padStart(2, "0");
+
+    let time24hr = `${hour}:${min01}`;
+    document.getElementById("id61").innerHTML = time24hr;
+}
