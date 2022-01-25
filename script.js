@@ -1445,3 +1445,17 @@ function getTheGap(str01) {
         document.getElementById("id62").innerHTML = -1;
     }
 }
+
+
+// Write a function to truncate a string to a certain number of words
+const myString01 = "Hello, my name is Shubham Sharma and I am a full stack developer"; 
+const worldLimit = 5;
+
+function myTruncate(myString01, worldLimit) {
+    let toArray = myString01.split(" ");
+    let mySlice = toArray.slice(0, worldLimit);
+    let toString = mySlice.toString();
+    let myReplace = toString.replace(/,/gi, " ");
+    
+    document.getElementById("id63").innerHTML = myReplace;
+}
