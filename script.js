@@ -1477,3 +1477,26 @@ function fibonacci(numbers01) {
 
     document.getElementById("id64").innerHTML = myArr[myArr.length - 1];
 }
+
+
+// Leap Year Challenge
+const checkYear = new Date().getFullYear();
+
+function isLeap(year) {
+    if (year % 4 === 0) {
+        if (year % 100 === 0) {
+            if (year % 400 === 0) {
+                document.getElementById("id65").innerHTML = year + " - Leap year.";
+            }
+            else {
+                document.getElementById("id65").innerHTML = year + " - Not a leap year.";
+            }
+        }
+        else {
+            document.getElementById("id65").innerHTML = year + " - Leap year.";
+        }
+    }
+    else {
+        document.getElementById("id65").innerHTML = year + " - Not a leap year.";
+    }
+}
