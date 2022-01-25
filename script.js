@@ -1459,3 +1459,21 @@ function myTruncate(myString01, worldLimit) {
     
     document.getElementById("id63").innerHTML = myReplace;
 }
+
+
+// Fibonacci series in JavaScript
+const numbers01 = 8;
+
+function fibonacci(numbers01) {
+    var myArr = [];
+
+    for (var i = 0; i < numbers01; i++) {
+        if(i < 2) {
+            myArr.push(i);
+        } else {
+            myArr.push(myArr[i-2] + myArr[i-1]);
+        }
+    } 
+
+    document.getElementById("id64").innerHTML = myArr[myArr.length - 1];
+}
