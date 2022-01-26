@@ -1465,17 +1465,20 @@ function myTruncate(myString01, worldLimit) {
 const numbers01 = 8;
 
 function fibonacci(numbers01) {
-    var myArr = [];
-
-    for (var i = 0; i < numbers01; i++) {
-        if(i < 2) {
-            myArr.push(i);
-        } else {
-            myArr.push(myArr[i-2] + myArr[i-1]);
-        }
-    } 
-
-    document.getElementById("id64").innerHTML = myArr[myArr.length - 1];
+    let myArr = [];
+    if (numbers01 === 0) {
+        myArr = [0];
+    }
+    else if (numbers01 === 1) {
+        myArr = [0, 1];
+    }
+    else {
+        myArr = [0, 1];
+        for (let i = 2; i < numbers01; i++) {
+            myArr.push(myArr[myArr.length - 2] + myArr[myArr.length - 1]);
+        } 
+    }
+    document.getElementById("id64").innerHTML = myArr;
 }
 
 
