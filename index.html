@@ -1005,8 +1005,7 @@
         <h2><u>SYNTAX</u></h2>
         ‣ Return the innerHTML property: <br> HTMLElementObject.innerHTML <br><br>
         ‣ Set the innerHTML property: <br> HTMLElementObject.innerHTML = text
-    </p>
-    <br>
+    </p><br>
     <p id = "id67">‣ Click the button to alert the text of this paragraph.</p>
     <button onclick = "myInnerHTML()">Try it</button>
     <p>‣ Delete the HTML content of a p element with id = "id68":</p>
@@ -1019,11 +1018,31 @@
     <br><br>
     <hr noshade size = "5">
 
+    <h2>HTML DOM outerText Property</h2>
+    <p>The outerText property sets or returns the text content of the specified node. <br> This 
+    property is similar to the innerText property, in fact getting the outerText returns the same 
+    result as getting the innerText property.</p>
+    <p>There are an important difference when setting 
+    an element's outerText, because the element itself is removed.</p>
+    <p>
+        <h2><u>SYNTAX</u></h2>
+        ‣ Return the text content of a node: <br> node.outerText <br><br>
+        ‣ Set the text content of a node (replacing the entire node): <br> node.outerText = text
+    </p>
+    <h4>‣ <u>Set outerText</u></h4>
+    <p>Set the outer text of an element:</p>
+    <p>When setting the outerText, the entire element gets replaced. Click the button to change 
+        (and remove) the h4 element:</p>
+    <button onclick = "myOuterText()">Change Header</button>
+
+    <br><br>
+    <hr noshade size = "5">
+
     <h2>HTML DOM outerHTML Property</h2>
     <p>The outerHTML property sets or returns the HTML element and all it's content, including the 
         start tag and it's attributes, and the end tag.</p>
     <p>
-        <h2>SYNTAX</h2>
+        <h2><u>SYNTAX</u></h2>
         ‣ Return the outerHTML property: <br> Element.outerHTML <br><br>
         ‣ Set the outerHTML property: <br> Element.outerHTML = text
         <h4>‣ <u>outerHTML</u></h4>
@@ -1031,10 +1050,9 @@
         a h1 to a h3.
     </p>
     <button onclick = "myOuterHTML()">Change Header</button>
-    <h4>Get outerHTML</h4>
-    <p>‣ Alert the outer HTML of a h3 element: <br> 
-        Click the button to alert the outer HTML of the h3 element:
-    </p>
+    <h4>‣ <u>Get outerHTML</u></h4>
+    <p>Alert the outer HTML of a h3 element: <br> Click the button to alert the outer HTML of the 
+        h3 element: </p>
     <button onclick = "myOuterHTML1()">Alert Header</button>
 
     <br><br>

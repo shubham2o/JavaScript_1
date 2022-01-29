@@ -1528,13 +1528,20 @@ function myInnerHTML2() {
 }
 
 
+// HTML DOM outerText Property
+function myOuterText() {
+    var outText = document.getElementsByTagName("h4")[0];
+    outText.outerText = "<h4>Changed content1</h4>";
+}
+
+
 // HTML DOM outerHTML Property
 function myOuterHTML() {
-    var outHTML = document.getElementsByTagName("h4")[0];
+    var outHTML = document.getElementsByTagName("h4")[1];
     outHTML.outerHTML = "<h2>‣ You changed the entire header element and it's content!</h2>";
 }
 
 function myOuterHTML1() {
-    var outHTML = document.getElementsByTagName("h4")[1];
+    var outHTML = document.getElementsByTagName("h4")[2];
     alert(outHTML.outerHTML);
 }
