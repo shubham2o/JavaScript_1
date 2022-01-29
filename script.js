@@ -1526,3 +1526,15 @@ function myInnerHTML2() {
     document.getElementById("id69").href = "https://www.w3schools.com/";
     document.getElementById("id69").target = "_blank"; 
 }
+
+
+// HTML DOM outerHTML Property
+function myOuterHTML() {
+    var outHTML = document.getElementsByTagName("h4")[0];
+    outHTML.outerHTML = "<h2>‣ You changed the entire header element and it's content!</h2>";
+}
+
+function myOuterHTML1() {
+    var outHTML = document.getElementsByTagName("h4")[1];
+    alert(outHTML.outerHTML);
+}

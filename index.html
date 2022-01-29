@@ -770,9 +770,9 @@
 
     <h2>Why use JSON?</h2>
     <p>The JSON format is syntactically similar to the code for creating JavaScript objects. Because
-        of this, a JavaScript program can easily convert JSON data into JavaScript objects. Since the 
-        format is text only, JSON data can easily be sent between computers, and used by any programming
-        language.</p>
+        of this, a JavaScript program can easily convert JSON data into JavaScript objects. Since 
+        the format is text only, JSON data can easily be sent between computers, and used by any 
+        programming language.</p>
     <p>JavaScript has a built in function for converting JSON strings into JavaScript objects: 
         <b>JSON.parse()</b>
     </p>
@@ -783,8 +783,8 @@
     <hr noshade size = "5">
 
     <h2>JSON Data - A Name and a Value</h2>
-    <p>JSON Data is written as name/value pairs (aka key/value) pairs. <br> A name/value pair consists of 
-        a field name (in double quotes), followed by a colon, followed by a value:</p>
+    <p>JSON Data is written as name/value pairs (aka key/value) pairs. <br> A name/value pair consists 
+        of a field name (in double quotes), followed by a colon, followed by a value:</p>
     <p> EXAMPLE :- "name" : "John"</p>
 
     <hr noshade size = "5">
@@ -797,8 +797,8 @@
     <hr noshade size = "5">
 
     <h2>JSON vs XML</h2>
-    <p>Both JSON and XML can be used to recieve data from a web server. <br> The following JSON and XML 
-        examples both define an employees object, with an array of 3 employees:</p>
+    <p>Both JSON and XML can be used to recieve data from a web server. <br> The following JSON 
+        and XML examples both define an employees object, with an array of 3 employees:</p>
     <div>
         <b>JSON Example</b>
         <p id = "id40"></p>
@@ -966,8 +966,8 @@
     <hr noshade size = "5">
 
     <h2>Leap Year Challenge</h2>
-    <p>Write a program that works out whether if a given year is a leap year. This is how to work out 
-        whether if a particular year is a leap year: <br><br>
+    <p>Write a program that works out whether if a given year is a leap year. This is how to work 
+        out whether if a particular year is a leap year: <br><br>
         1. A year is a leap year if it is evenly divisible by 4; <br> 
         2. <b>except</b> if that year is also evenly divisible by 100; <br>
         3. <b>unless</b> that year is also evenly divisible by 400.
@@ -988,8 +988,8 @@
     all elements, <b>except</b> for script and style elements. <br>
     2. innerText will not return the text of elements that are hidden with CSS (textContent will). <br>
     <p><b>Tip: </b> To set or return the HTML content of an element, use the innerHTML property.</p>
-    <button onclick = "myInnerText()" id = "myBtn">Click the button get the text content of the button 
-        element.</button>
+    <button onclick = "myInnerText()" id = "myBtn">Click the button get the text content of the 
+        button element.</button>
     <p id = "id66"></p>
     <p>
         <h2><u>SYNTAX</u></h2>
@@ -1015,6 +1015,27 @@
     <p>‣ Change the HTML content, URL, and target of a link:</p>
     <a id = "id69" href = "https://www.google.com/" target="_blank">GOOGLE</a><br><br>
     <button onclick = "myInnerHTML2()">Change it</button>
+
+    <br><br>
+    <hr noshade size = "5">
+
+    <h2>HTML DOM outerHTML Property</h2>
+    <p>The outerHTML property sets or returns the HTML element and all it's content, including the 
+        start tag and it's attributes, and the end tag.</p>
+    <p>
+        <h2>SYNTAX</h2>
+        ‣ Return the outerHTML property: <br> Element.outerHTML <br><br>
+        ‣ Set the outerHTML property: <br> Element.outerHTML = text
+        <h4>‣ <u>outerHTML</u></h4>
+        Change a header element and it's content: <br> Click the button to change the header from 
+        a h1 to a h3.
+    </p>
+    <button onclick = "myOuterHTML()">Change Header</button>
+    <h4>Get outerHTML</h4>
+    <p>‣ Alert the outer HTML of a h3 element: <br> 
+        Click the button to alert the outer HTML of the h3 element:
+    </p>
+    <button onclick = "myOuterHTML1()">Alert Header</button>
 
     <br><br>
     <hr noshade size = "5">
