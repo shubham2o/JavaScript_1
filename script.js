@@ -1510,3 +1510,19 @@ function myInnerText() {
     var inTxt = document.getElementById("myBtn").innerText;
     document.getElementById("id66").innerHTML = inTxt;
 }
+
+
+// HTML DOM innerHTML Property
+function myInnerHTML() {
+    alert(document.getElementById("id67").innerHTML);
+}
+
+function myInnerHTML1() {
+    document.getElementById("id68").innerHTML = "";
+}
+
+function myInnerHTML2() {
+    document.getElementById("id69").innerHTML = "W3Schools";
+    document.getElementById("id69").href = "https://www.w3schools.com/";
+    document.getElementById("id69").target = "_blank"; 
+}
