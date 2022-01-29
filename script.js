@@ -1503,3 +1503,10 @@ function isLeap(year) {
         document.getElementById("id65").innerHTML = year + " - Not a leap year.";
     }
 }
+
+
+// HTML DOM innerText Property
+function myInnerText() {
+    var inTxt = document.getElementById("myBtn").innerText;
+    document.getElementById("id66").innerHTML = inTxt;
+}

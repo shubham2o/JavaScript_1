@@ -978,6 +978,27 @@
 
     <hr noshade size = "5">
 
+    <h2>HTML DOM innerText Property</h2>
+    <p>The innerText property sets or returns the text content of the specified node, all its descendants. <br>
+    If you set the innerText property, any child nodes are removed and replaced by a single Text node 
+    containing the specified string.</p>
+    <p><b>Note :</b> This property is similar to the textContent property, however there are some 
+        differences: <br>
+    1. textContent returns the text content of <b>all</b> elements, while innerText the content of 
+    all elements, <b>except</b> for script and style elements. <br>
+    2. innerText will not return the text of elements that are hidden with CSS (textContent will). <br>
+    <p><b>Tip: </b> To set or return the HTML content of an element, use the innerHTML property.</p>
+    <button onclick = "myInnerText()" id = "myBtn">Click the button get the text content of the button 
+        element.</button>
+    <p id = "id66"></p>
+    <p>
+        <h2><u>SYNTAX</u></h2>
+        ‣ Returns the text content of a node: <br> node.innerText <br><br>
+        ‣ Set the text content of a node: <br> node.innerHTML = text
+    </p>
+
+    <hr noshade size = "5">
+
     <script src = "script.js"></script>
 </body>
 </html>
