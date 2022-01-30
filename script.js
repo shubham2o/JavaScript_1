@@ -1572,3 +1572,24 @@ function elName1() {
         }
     }
 }
+
+
+// The HTMLCollection Object
+function htmlCol() {
+    var htmlCol = document.getElementsByTagName("span");
+    document.getElementById("id73").innerHTML = htmlCol;
+}
+
+function htmlCol1() {
+    var htmlCol1 = document.getElementsByTagName("span").length;
+    document.getElementById("id74").innerHTML = htmlCol1;
+}
+
+function htmlCol2() {
+    var a1, b1, c1;
+    a1 = document.getElementsByTagName("*");
+    c1 = a1.length;
+    for (b1 = 0; b1 < c1; b1++) {
+        document.getElementById("id75").innerHTML = a1[b1].tagName + "<br>";
+    }
+}
