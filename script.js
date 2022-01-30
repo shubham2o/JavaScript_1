@@ -1556,3 +1556,19 @@ function cssText() {
 function cssText1() {
     alert(document.getElementById("id71").style.cssText);
 }
+
+
+// HTML DOM Document getElementsByName()
+function elName() {
+    let collection = document.getElementsByName("fname");
+    document.getElementById("id72").innerHTML = collection[0].tagName;
+}
+
+function elName1() {
+    const collection1 = document.getElementsByName("animal");
+    for (let i = 0; i < collection1.length; i++) {
+        if (collection1[0].type == "checkbox") {
+            collection1[i].checked = true;
+        }
+    }
+}
