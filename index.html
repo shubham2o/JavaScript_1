@@ -1111,6 +1111,46 @@
 
     <hr noshade size = "5">
 
+    <h2>Input Text value Property</h2>
+    <p>The value property sets or returns the value of the vakue attribute of a text field.</p>
+    <p>The value property contains the default value OR the value a user types in (or a value 
+        set by a script).</p>
+    <p>
+        <h2><u>SYNTAX</u></h2>
+        ‣ Return the value property: <br> textObject.value <br><br>
+        ‣ Set the value property: <br> textObject.value
+    </p>
+    <p>‣ Change the value of a text field:</p>
+    <input type = "text" id = "id76" value = "Mickey"><br><br>
+    <button onclick = "myValue()">Click</button>
+
+    <br><br>
+    <hr noshade size = "5">
+
+    <h2>HTML DOM Element attributes</h2>
+    <p>The attributes property returns a collection of attributes in an element. <br> The attributes 
+        property returns a NamedNodeMap.</p>
+    <p>A NamedNodeMap is an array-like collection (list) of Attr (Attributes) Objects. A NamedNodeMap 
+        has a length property that returns the number of attributes in the list.</p>
+    <p>The attributes can be accessed by index numbers. The index starts at 0.</p>
+    <p>
+        <h2><u>SYNTAX</u></h2>
+        node.attributes
+    </p>
+    <p>‣ How many attributes does the img element have:</p>
+    <img id = "flowerImg" src = "images/klematis.jpg" alt = "Flower" width = "150" height = "113"><br><br>
+    <button onclick = "myAttributes()">Click</button>
+    <p id = "id77"></p>
+    <p>‣ The attributes of the image are:</p>
+    <img id = "flowerImg1" src = "images/klematis.jpg" alt = "Flower" width = "150" height = "113"><br><br>
+    <button onclick = "myAttributes1()">Click</button>
+    <p id = "id78"></p>
+    <p>‣ Get the name and value of a button element's second (index 1) attribute.</p>
+    <button id = "Btn01" onclick = "myAttributes2()">Click</button>
+    <p id = "id79"></p>
+
+    <hr noshade size = "5">
+
     <script src = "script.js"></script>
 </body>
 </html>

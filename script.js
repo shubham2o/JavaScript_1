@@ -1593,3 +1593,32 @@ function htmlCol2() {
         document.getElementById("id75").innerHTML = a1[b1].tagName + "<br>";
     }
 }
+
+
+// Input Text value Property
+function myValue() {
+    document.getElementById("id76").value = "JOHNNY BRAVO";
+}
+
+
+// HTML DOM Element attributes
+function myAttributes() {
+    let num01 = document.getElementById("flowerImg").attributes.length;
+    document.getElementById("id77").innerHTML = num01;
+}
+
+function myAttributes1() {
+    const nodeMap = document.getElementById("flowerImg1").attributes;
+    let txt01 = "";
+    for (let i = 0; i < nodeMap.length; i++) {
+        txt01 += nodeMap[i].name + " : " + nodeMap[i].value + "<br>";
+    }
+    document.getElementById("id78").innerHTML = txt01;
+}
+
+function myAttributes2() {
+    let txt02 = document.getElementById("Btn01").attributes[1].name;
+    let txt03 = document.getElementById("Btn01").attributes[1].value;
+    
+    document.getElementById("id79").innerHTML = txt02 + " : " + txt03;
+}
