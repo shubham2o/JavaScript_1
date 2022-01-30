@@ -1545,3 +1545,14 @@ function myOuterHTML1() {
     var outHTML = document.getElementsByTagName("h4")[2];
     alert(outHTML.outerHTML);
 }
+
+
+// Style cssText Property
+function cssText() {
+    document.getElementById("id70").style.cssText = 
+    "background-color : pink; font-size : 30px; border : 2px dashed green; color : white;" 
+}
+
+function cssText1() {
+    alert(document.getElementById("id71").style.cssText);
+}
