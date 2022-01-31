@@ -1627,7 +1627,7 @@ function myAttributes2() {
 // Throwing Custom Errors
 function validateAge() {
     try {
-        var age01 = document.getElementById("age01").value;
+        var age01 = document.getElementById( "age01" ).value;
         if ( age01 == "" ) {
             throw "Age can not be empty";
         }
@@ -1636,6 +1636,26 @@ function validateAge() {
         }
     }
     catch ( obj ) {
-        document.getElementById("id80").innerHTML = obj;
+        document.getElementById( "id80" ).innerHTML = obj;
+    }
+}
+
+
+// Finally
+function validateAge1() {
+    try {
+        var age02 = document.getElementById( "age02" ).value;
+        if ( age02 == "" ) {
+            throw "Age can not be empty";
+        }
+        if ( age02 < 18 ) {
+            throw "To young to vote";
+        }
+    }
+    catch ( obj02 ) {
+        document.getElementById( "id81" ).innerHTML = obj02;
+    }
+    finally {
+        document.getElementById( "id82" ).innerHTML = "Inside Finally";
     }
 }
