@@ -1622,3 +1622,20 @@ function myAttributes2() {
     
     document.getElementById("id79").innerHTML = txt02 + " : " + txt03;
 }
+
+
+// Throwing Custom Errors
+function validateAge() {
+    try {
+        var age01 = document.getElementById("age01").value;
+        if ( age01 == "" ) {
+            throw "Age can not be empty";
+        }
+        if ( age01 < 18 ) {
+            throw "To young to vote";
+        }
+    }
+    catch ( obj ) {
+        document.getElementById("id80").innerHTML = obj;
+    }
+}
