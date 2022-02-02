@@ -1681,3 +1681,17 @@ function protoInh() {
 
     return project2.display();
 }
+
+
+// The Conditional (Ternary) Operator
+function ternaryOp() {
+    const ageInYrs = 23;
+    ageInYrs >= 18 ? document.getElementById( "id84" ).innerHTML = "I like to drink wine" : 
+    document.getElementById( "id84" ).innerHTML = "I like to drink water";
+}
+
+function ternaryOp1() {
+    const ageInYrs1 = 15;
+    const drink = ageInYrs1 >= 18 ? "I like to drink wine" : "I like to drink water";
+    document.getElementById("id85").innerHTML = drink;
+}
