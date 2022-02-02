@@ -1659,3 +1659,25 @@ function validateAge1() {
         document.getElementById( "id82" ).innerHTML = "Inside Finally";
     }
 }
+
+
+// Inheriting from other objects
+function protoInh() {
+    var project1 = {
+        name : "Road Work",
+        display : function () {
+            document.getElementById( "id83" ).innerHTML = this.name;
+        }
+    };
+
+    var project2 = Object.create( project1, {
+        name : {
+            configurable : true,
+            enumerable : true,
+            value : "Bridge Work",
+            writable : true
+        }
+    } );
+
+    return project2.display();
+}
