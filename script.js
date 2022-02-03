@@ -1693,5 +1693,16 @@ function ternaryOp() {
 function ternaryOp1() {
     const ageInYrs1 = 15;
     const drink = ageInYrs1 >= 18 ? "I like to drink wine" : "I like to drink water";
-    document.getElementById("id85").innerHTML = drink;
+    document.getElementById( "id85" ).innerHTML = drink;
 }
+
+
+// Calling / Running / Invoking Function
+function criF( apples, oranges ) {
+    console.log( apples, oranges );
+    const juice = `Juice with ${ apples } apples and ${ oranges } oranges.`;
+    return juice;
+}
+
+const appleJuice = criF( 5, 0 );
+console.log( appleJuice );
