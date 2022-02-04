@@ -6,6 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index.html</title>
+    <style>
+        .myStyle1 {
+            background-color : coral;
+            padding : 16px; 
+        }
+        .newClass {
+            background-color : lightblue;
+            text-align : center;
+            font-size : 25px;
+            padding : 32px;
+        }
+    </style>
 </head>
 <p>
     <h2>JavaScript can change HTML Attribute Values</h2>
@@ -1209,6 +1221,43 @@
         element.</p>
     <button onclick = "textContent1()" id = "btnClick">TRY IT</button>
     <p id = "id86"></p>
+
+    <hr noshade size = "5">
+
+    <h2>HTML DOM Element classList</h2>
+    <p>The classList property returns the CSS classnames of an element. The classList property returns 
+        a DOMTokenList object. The classList property is read-only, but you can use add() and remove() 
+        methods to add or remove CSS classes.</p>
+    <p><b>Note :</b> The classList property is useful both to add, remove and toggle CSS on an element.</p>
+    <p>‣ Add a "myStyle1" class to an element: <br> Click "Add" to add the "myStyle1" class to myDiv1.</p>
+    <button onclick = "classList1()">Add</button><br><br>
+    <div id = "myDiv1">
+        <p>I am a myDiv1</p>
+    </div>
+    <p>‣ Remove the "myStyle1" class from an element:</p>
+    <button onclick = "classList2()">Add</button>
+    <button onclick = "classList3()">Remove</button><br><br>
+    <div id = "myDiv2">
+        <p>I am a myDiv2</p>
+    </div>
+    <p>‣ Toggle between two classes for an element:</p>
+    <button onclick = "classList4()">Toggle</button><br><br>
+    <div id = "myDiv3" class = "myStyle1">
+        <p>I am a myDiv3</p>
+    </div>
+    <p>‣ Get the first class of an element:</p>
+    <div id = "myDiv4" class = "myStyle newClass">
+        <p>I am a myDiv4</p>
+    </div><br>
+    <button onclick = "classList5()">CLICK</button>
+    <p>The class name of the second class in "myDiv4" is : </p>
+    <p id = "id87"></p>
+    <p>‣ Does an element has a "myStyle1" class?</p>
+    <div id = "myDiv5" class = "myStyle1"> 
+        <p>I am myDiv5</p>
+    </div><br>
+    <button onclick = "classList6()">CLICK</button>
+    <p id = "id88"></p>
 
     <hr noshade size = "5">
 

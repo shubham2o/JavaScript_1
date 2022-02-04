@@ -1713,3 +1713,30 @@ function textContent1() {
     var txtCon = document.getElementById( "btnClick" ).textContent;
     document.getElementById( "id86" ).innerHTML = txtCon;
 }
+
+
+// HTML DOM Element classList
+function classList1() {
+    document.getElementById( "myDiv1" ).classList.add( "myStyle1" );
+}
+
+function classList2() {
+    document.getElementById( "myDiv2" ).classList.add( "myStyle1" );
+}
+function classList3() {
+    document.getElementById( "myDiv2" ).classList.remove( "myStyle1" );
+}
+
+function classList4() {
+    document.getElementById( "myDiv3" ).classList.toggle( "newClass");
+}
+
+function classList5() {
+    let clslst = document.getElementById( "myDiv4" ).classList.item(1);
+    document.getElementById( "id87").innerHTML = clslst;
+}
+
+function classList6() {
+    let clslst1 = document.getElementById( "myDiv5" ).classList.contains( "myStyle1" );
+    document.getElementById( "id88" ).innerHTML = clslst1;
+}
