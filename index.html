@@ -1190,6 +1190,28 @@
     <br><br>
     <hr noshade size = "5">
 
+    <h2>HTML DOM textContent Property</h2>
+    <p>The textContent property sets or returns the text content of the specified node, and all its 
+        descendants. <br> If you set the textContent property, any child nodes are removed and 
+        replaced by a single Text node containing the specified string.</p>
+    <p>
+        <b>Note :</b> 
+        This property is similar to the innerText property, however there are some differences: <br>
+        <b>1.</b> textContent returns the text content of all elements, while innerText returns the 
+        content of all elements, except for script and style elements. <br>
+        <b>2.</b> innerText will not return the text of elements that are hidden with CSS (textContent
+        will).
+    </p>
+    <p>Sometimes this property can be used instead of the nodeValue property, but remember that this 
+        property returns the text of all child nodes as well. To set or return the HTML content of an 
+        element, use the innerHTML property.</p>
+    <p>‣ Get the text content of an element: <br> Click the button get the text content of the button 
+        element.</p>
+    <button onclick = "textContent1()" id = "btnClick">TRY IT</button>
+    <p id = "id86"></p>
+
+    <hr noshade size = "5">
+
     <script src = "script.js"></script>
 </body>
 </html>

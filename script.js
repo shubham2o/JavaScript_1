@@ -1706,3 +1706,10 @@ function criF( apples, oranges ) {
 
 const appleJuice = criF( 5, 0 );
 console.log( appleJuice );
+
+
+// HTML DOM textContent Property
+function textContent1() {
+    var txtCon = document.getElementById( "btnClick" ).textContent;
+    document.getElementById( "id86" ).innerHTML = txtCon;
+}
