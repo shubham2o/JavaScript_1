@@ -1752,3 +1752,12 @@ function fill1() {
     const fruitsF1 = [ "Banana", "Orange", "Apple", "Mango" ];
     document.getElementById( "id90" ).innerHTML = fruitsF1.fill( "Kiwi", 2, 4);
 }
+
+
+// The Array.from() Method
+function from() {
+    let myText1 = "ABCDEFG";
+    const myArray1 = Array.from( myText1 );
+
+    document.getElementById( "id91" ).innerHTML = myArray1;
+}
