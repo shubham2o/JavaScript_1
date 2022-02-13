@@ -1740,3 +1740,15 @@ function classList6() {
     let clslst1 = document.getElementById( "myDiv5" ).classList.contains( "myStyle1" );
     document.getElementById( "id88" ).innerHTML = clslst1;
 }
+
+
+// The fill() Method
+function fill() {
+    const fruitsF = [ "Banana", "Orange", "Apple", "Mango" ]; 
+    document.getElementById( "id89" ).innerHTML = fruitsF.fill( "Kiwi" );
+}
+
+function fill1() {
+    const fruitsF1 = [ "Banana", "Orange", "Apple", "Mango" ];
+    document.getElementById( "id90" ).innerHTML = fruitsF1.fill( "Kiwi", 2, 4);
+}
