@@ -1,65 +1,62 @@
-// Bind Method
 let name = {
     firstName : "Shubham",
     lastName : "Sharma"
 }
 
-let fullName = function( initials, nationality ) {
-    document.getElementById( "bind" ).innerHTML = 
-    "• " + this.firstName + " " + this.lastName + " " + initials + " " + nationality;
-}
-
-let getFullName = fullName.bind( name , "(SS)" );
-getFullName( "Indian" );
-
-
-
-// Polyfill for Bind Method via Call
-Function.prototype.bind = function( name, initials ) {
-    let obj = this;
-    return function( nationality ) {
-        obj.call( name , initials, nationality );
-    }
-}
-
-let fullName1 = function( initials, nationality ) {
-    document.getElementById( "poly" ).innerHTML = 
-    "• " + this.firstName + " " + this.lastName + " " + initials + " " + nationality;
-}
-
-let getFullName1 = fullName1.bind( name , "(SS)" );
-getFullName1( "Indian" );
-
-
-
-// Bind Method
 let gsw = {
     firstName : "Stephen",
     lastName : "Curry"
 }
 
-let fullGsw = function( initials, nationality ) {
-    document.getElementById( "bind1" ).innerHTML = 
-    "• " + this.firstName + " " + this.lastName + " " + initials + " " + nationality;
+let fullName = function( initials, nationality ) {
+    console.log( 
+        "• " + this.firstName + " " + this.lastName + " " + initials + " " + nationality
+    );
 }
 
-let getFullGsw = fullGsw.bind( gsw , "(SC30)" );
+
+// Bind Method
+console.log(`1> <~~~ NORMAL BIND METHOD ~~~>`);
+
+let getFullName = fullName.bind( name, "(SS)" );
+getFullName( "Indian" );
+
+let getFullGsw = fullName.bind( gsw, "(SC30)" );
 getFullGsw( "American" );
 
 
-
 // Polyfill for Bind Method via Call
-Function.prototype.bind1 = function( gsw, initials ) {
-    obj1 = this;
+console.log(`
+2> <~~~ POLYFILL BIND METHOD via Call ~~~>`);
+
+Function.prototype.bind = function( name, initials ) {
+    let obj = this;
     return function( nationality ) {
-        obj1.call( gsw, initials, nationality );
+        obj.call( name, initials, nationality );
     }
 }
 
-let fullGsw1 = function( initials, nationality ) {
-    document.getElementById( "poly1" ).innerHTML = 
-    "• " + this.firstName + " " + this.lastName + " " + initials + " " + nationality;
+let getFullName1 = fullName.bind( name, "(SS)" );
+getFullName1( "Indian" );
+
+let getFullGsw1 = fullName.bind( gsw, "(SC30)" );
+getFullGsw1( "American" );
+
+
+// Polyfill for Bind Method via Apply
+console.log(`
+3> <~~~ POLYFILL BIND METHOD via Apply ~~~>`);
+
+Function.prototype.mybind = function( ...args ) {
+    let obj1 = this,
+        params = args.slice(1);
+    return function( ...args2 ) {
+        obj1.apply( args[ 0 ], [ ...params, ...args2 ] );
+    }
 }
 
-let getFullGsw1 = fullGsw1.bind1( gsw , "(SC30)" );
-getFullGsw1( "American" );
+let getFullName2 = fullName.mybind( name, "(SS)" );
+getFullName2( "Indian" );
+
+let getFullGsw2 = fullName.mybind( gsw, "(SC30)" );
+getFullGsw2( "American" );
