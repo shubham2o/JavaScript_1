@@ -15,7 +15,7 @@ getFullName( "Indian" );
 
 
 // Polyfill for Bind Method via Call
-Function.prototype.myBind = function( name, initials ) {
+Function.prototype.bind = function( name, initials ) {
     let obj = this;
     return function( nationality ) {
         obj.call( name , initials, nationality );
@@ -27,7 +27,7 @@ let fullName1 = function( initials, nationality ) {
     "• " + this.firstName + " " + this.lastName + " " + initials + " " + nationality;
 }
 
-let getFullName1 = fullName1.myBind( name , "(SS)" );
+let getFullName1 = fullName1.bind( name , "(SS)" );
 getFullName1( "Indian" );
 
 
@@ -49,7 +49,7 @@ getFullGsw( "American" );
 
 
 // Polyfill for Bind Method via Call
-Function.prototype.myBind1 = function( gsw, initials ) {
+Function.prototype.bind1 = function( gsw, initials ) {
     obj1 = this;
     return function( nationality ) {
         obj1.call( gsw, initials, nationality );
@@ -61,5 +61,5 @@ let fullGsw1 = function( initials, nationality ) {
     "• " + this.firstName + " " + this.lastName + " " + initials + " " + nationality;
 }
 
-let getFullGsw1 = fullGsw1.myBind1( gsw , "(SC30)" );
+let getFullGsw1 = fullGsw1.bind1( gsw , "(SC30)" );
 getFullGsw1( "American" );
