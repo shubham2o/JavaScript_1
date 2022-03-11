@@ -128,13 +128,12 @@ button.addEventListener( "click", debounce(function() {
 
 // Debouncing via Input type text
 let counter = 0;
-
 const getData = () => {
     // calls an API and gets data
     console.log( "Fetching Data... ", ++counter );
 }
 
-const doSomeMagic = function( fn, dl ) {
+const debounce1 = function( fn, dl ) {
     let time;
     return function() {
         clearTimeout( time );
@@ -146,4 +145,4 @@ const doSomeMagic = function( fn, dl ) {
     }
 }
 
-const betterFunction = doSomeMagic( getData, 500 );
+const betterFunction = debounce1( getData, 400 );
