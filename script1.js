@@ -60,3 +60,47 @@ getFullName2( "Indian" );
 
 let getFullGsw2 = fullName.bind2( gsw, "(SC30)" );
 getFullGsw2( "American" );
+
+
+// Function Currying via Bind Method
+console.log(`
+4> <~~~ FUNCTION CURRING via Bind Method ~~~>`);
+
+let multiply = function( x, y ) {
+    console.log("• " + x * y );
+}
+
+let multiplyBy2 = multiply.bind( this, 2 );
+multiplyBy2( 7 );
+
+let multiplyBy3 = multiply.bind( this, 3 );
+multiplyBy3( 10 );
+
+let multiplyBy4 = multiply.bind( this, 4, 12 );
+multiplyBy4( 6 );
+
+let multiplyBy5 = multiply.bind( this );
+multiplyBy5( 5, 1 );
+
+
+// Function Currying via Closures
+console.log(`
+5> <~~~ FUNCTION CURRING via Closures ~~~>`);
+
+let multiplyX = function( x ) {
+    return function( y ) {
+        console.log("• " + x * y);
+    }
+}
+
+let multiplyBy02 = multiplyX( 2 );
+multiplyBy02( 7 );
+
+let multiplyBy03 = multiplyX( 3 );
+multiplyBy03( 10 );
+
+let multiplyBy04 = multiplyX( 4, 6 );
+multiplyBy04( 12 );
+
+let multiplyBy05 = multiplyX( );
+multiplyBy05( 5, 1 );
