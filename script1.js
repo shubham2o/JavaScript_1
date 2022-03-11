@@ -64,7 +64,7 @@ getFullGsw2( "American" );
 
 // Function Currying via Bind Method
 console.log(`
-4> <~~~ FUNCTION CURRING via Bind Method ~~~>`);
+4> <~~~ FUNCTION CURRYING via Bind Method ~~~>`);
 
 let multiply = function( x, y ) {
     console.log("• " + x * y );
@@ -85,7 +85,7 @@ multiplyBy5( 5, 1 );
 
 // Function Currying via Closures
 console.log(`
-5> <~~~ FUNCTION CURRING via Closures ~~~>`);
+5> <~~~ FUNCTION CURRYING via Closures ~~~>`);
 
 let multiplyX = function( x ) {
     return function( y ) {
@@ -104,3 +104,46 @@ multiplyBy04( 12 );
 
 let multiplyBy05 = multiplyX( );
 multiplyBy05( 5, 1 );
+
+
+// Debouncing via Button
+let count = 0;
+let button = document.getElementById( "debounce" );
+
+function debounce( func, delay ) {
+    let timer;
+    return function() {
+        clearTimeout( timer );
+        let argume = arguments;
+        timer = setTimeout( function() {
+            func.apply( this, argume );
+        }, delay );
+    }
+}
+
+button.addEventListener( "click", debounce(function() {
+    console.log( "Debounce... ", ++count )
+}, 1200) );
+
+
+// Debouncing via Input type text
+let counter = 0;
+
+const getData = () => {
+    // calls an API and gets data
+    console.log( "Fetching Data... ", ++counter );
+}
+
+const doSomeMagic = function( fn, dl ) {
+    let time;
+    return function() {
+        clearTimeout( time );
+        let context = this,
+            argumen = arguments;
+        time = setTimeout( () => {
+            fn.apply( context, argumen );
+        }, dl);
+    }
+}
+
+const betterFunction = doSomeMagic( getData, 500 );
