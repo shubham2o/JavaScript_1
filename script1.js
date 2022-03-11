@@ -29,17 +29,17 @@ getFullGsw( "American" );
 console.log(`
 2> <~~~ POLYFILL BIND METHOD via Call ~~~>`);
 
-Function.prototype.bind = function( name, initials ) {
-    let obj = this;
+Function.prototype.bind1 = function( name, initials ) {
+    let obj1 = this;
     return function( nationality ) {
-        obj.call( name, initials, nationality );
+        obj1.call( name, initials, nationality );
     }
 }
 
-let getFullName1 = fullName.bind( name, "(SS)" );
+let getFullName1 = fullName.bind1( name, "(SS)" );
 getFullName1( "Indian" );
 
-let getFullGsw1 = fullName.bind( gsw, "(SC30)" );
+let getFullGsw1 = fullName.bind1( gsw, "(SC30)" );
 getFullGsw1( "American" );
 
 
@@ -47,16 +47,16 @@ getFullGsw1( "American" );
 console.log(`
 3> <~~~ POLYFILL BIND METHOD via Apply ~~~>`);
 
-Function.prototype.mybind = function( ...args ) {
-    let obj1 = this,
+Function.prototype.bind2 = function( ...args ) {
+    let obj2 = this,
         params = args.slice(1);
     return function( ...args2 ) {
-        obj1.apply( args[ 0 ], [ ...params, ...args2 ] );
+        obj2.apply( args[ 0 ], [ ...params, ...args2 ] );
     }
 }
 
-let getFullName2 = fullName.mybind( name, "(SS)" );
+let getFullName2 = fullName.bind2( name, "(SS)" );
 getFullName2( "Indian" );
 
-let getFullGsw2 = fullName.mybind( gsw, "(SC30)" );
+let getFullGsw2 = fullName.bind2( gsw, "(SC30)" );
 getFullGsw2( "American" );
