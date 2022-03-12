@@ -146,3 +146,21 @@ const debounce1 = function( fn, dl ) {
 }
 
 const betterFunction = debounce1( getData, 400 );
+
+
+// Event Delegation via Unordered List
+document.querySelector( "#category" ).addEventListener( "click", (e) => {
+    console.log( e.target.id );
+    if ( e.target.tagName == "LI" ) {
+        window.location.href = "/" + e.target.id;
+    }
+} );
+
+
+// Event Delegation via Input type text
+document.querySelector( "#form" ).addEventListener( "keyup", (e) => {
+    console.log( e );
+    if ( e.target.dataset.uppercase != undefined ) {
+        e.target.value = e.target.value.toUpperCase();
+    }
+} )
