@@ -129,7 +129,7 @@ button.addEventListener( "click", debounce(function() {
 
 // Debouncing via Input type text
 console.log(`
-7> Debouncing via Input type text ~~~>`);
+7> <~~~ Debouncing via Input type text ~~~>`);
 const getData = () => {
     // calls an API and gets data
     console.count( "Fetching Data... " );
@@ -152,7 +152,7 @@ const betterFunction = debounce1( getData, 400 );
 
 // Event Delegation via Unordered List
 console.log(`
-8> Event Delegation via Unordered List ~~~>`);
+8> <~~~ Event Delegation via Unordered List ~~~>`);
 document.querySelector( "#category" ).addEventListener( "click", (e) => {
     console.log( e.target.id );
     if ( e.target.tagName == "LI" ) {
@@ -163,7 +163,7 @@ document.querySelector( "#category" ).addEventListener( "click", (e) => {
 
 // Event Delegation via Input type text
 console.log(`
-9> Event Delegation via Input type text ~~~>`);
+9> <~~~ Event Delegation via Input type text ~~~>`);
 document.querySelector( "#form" ).addEventListener( "keyup", (e) => {
     console.log( e );
     if ( e.target.dataset.uppercase != undefined ) {
@@ -172,9 +172,9 @@ document.querySelector( "#form" ).addEventListener( "keyup", (e) => {
 } )
 
 
-// Throttling
+// Throttling via Window Resize
 console.log(`
-10> Throttling ~~~>`);
+10> <~~~ Throttling via Window Resize ~~~>`);
 const loggerFunc = () => {
     console.count( "********** THROTTLED FUNCTION **********" );
 }
@@ -201,9 +201,30 @@ window.addEventListener( "resize", betterLoggerFunction );
 
 // This is the normal function without throttling
 console.log(`
-11> This is the normal function without throttling ~~~>`);
+11> <~~~ This is the normal function without throttling ~~~>`);
 const normalFunc = () => {
     console.count( "normal function" );
 }
 
 window.addEventListener( "resize", normalFunc );
+
+
+// Throttling via Button
+console.log(`
+12> <~~~ Throttling via Button ~~~>`)
+let throttling = document.getElementById( "throttleBtn" );
+
+function throttlingBtn( func, delay ) {
+    let prev = 0;
+    return function( ...args ) {
+        let now = new Date().getTime();
+        if ( now - prev > delay ) {
+            prev = now;
+            return func( ...args );
+        }
+    }
+}
+
+throttling.addEventListener( "click", throttlingBtn( function() {
+    console.count( "******* THROTTLING *******" );
+}, 2000 ) )
