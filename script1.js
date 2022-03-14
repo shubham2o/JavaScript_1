@@ -107,7 +107,8 @@ multiplyBy05( 5, 1 );
 
 
 // Debouncing via Button
-let count = 0;
+console.log(`
+6> <~~~ Debouncing via Button ~~~>`);
 let button = document.getElementById( "debounce" );
 
 function debounce( func, delay ) {
@@ -122,15 +123,16 @@ function debounce( func, delay ) {
 }
 
 button.addEventListener( "click", debounce(function() {
-    console.log( "Debounce... ", ++count )
+    console.count( "Debounce... ")
 }, 1200) );
 
 
 // Debouncing via Input type text
-let counter = 0;
+console.log(`
+7> Debouncing via Input type text ~~~>`);
 const getData = () => {
     // calls an API and gets data
-    console.log( "Fetching Data... ", ++counter );
+    console.count( "Fetching Data... " );
 }
 
 const debounce1 = function( fn, dl ) {
@@ -149,6 +151,8 @@ const betterFunction = debounce1( getData, 400 );
 
 
 // Event Delegation via Unordered List
+console.log(`
+8> Event Delegation via Unordered List ~~~>`);
 document.querySelector( "#category" ).addEventListener( "click", (e) => {
     console.log( e.target.id );
     if ( e.target.tagName == "LI" ) {
@@ -158,9 +162,48 @@ document.querySelector( "#category" ).addEventListener( "click", (e) => {
 
 
 // Event Delegation via Input type text
+console.log(`
+9> Event Delegation via Input type text ~~~>`);
 document.querySelector( "#form" ).addEventListener( "keyup", (e) => {
     console.log( e );
     if ( e.target.dataset.uppercase != undefined ) {
         e.target.value = e.target.value.toUpperCase();
     }
 } )
+
+
+// Throttling
+console.log(`
+10> Throttling ~~~>`);
+const loggerFunc = () => {
+    console.count( "********** THROTTLED FUNCTION **********" );
+}
+
+const throttle = ( fn, limit ) => {
+    let flag = true;
+    return function () {
+        let context = this;
+        let args = arguments;
+        if ( flag ) {
+            fn.apply( context, args );
+            flag = false;
+            setTimeout( () => {
+                flag = true;
+            }, limit );
+        }
+    }
+}
+
+const betterLoggerFunction = throttle( loggerFunc, 1500 );
+
+window.addEventListener( "resize", betterLoggerFunction );
+
+
+// This is the normal function without throttling
+console.log(`
+11> This is the normal function without throttling ~~~>`);
+const normalFunc = () => {
+    console.count( "normal function" );
+}
+
+window.addEventListener( "resize", normalFunc );
