@@ -230,10 +230,12 @@ throttling.addEventListener( "click", throttlingBtn( function() {
 }, 2000 ) )
 
 
-/* Higher Order Functions (H.O.F)
+/* Higher Order Functions ( H.O.F )
 EXAMPLE 1
 The function y below which takes x function as an argument is the H.O.F and
 x function below is the callback function */
+console.log(`
+13> <~~~ H.O.F EXAMPLE 1 ~~~>`)
 function x() {
     console.log( "Namaste JavaScript" );
 }
@@ -241,3 +243,68 @@ function x() {
 function y( x ) { 
     x();
 }
+
+
+/* EXAMPLE 2
+PROBLEMS that will occur from the execution of the below code are as follows :-
+1. Repetitive - DRY ( Don't Repeat Yourself )
+2. Code Reuseability
+console.log(`
+14> <~~~ H.O.F EXAMPLE 2 ~~~>`);
+const radius = [ 3, 1, 2, 4 ];
+
+const calculateArea = function ( radius ) {
+    const output = [];
+    for ( let i = 0; i < radius.length; i++ ) {
+        output.push( Math.PI * radius[ i ]  * radius[ i ] );
+    }
+    return output;
+};
+
+console.log( calculateArea( radius ) );
+
+const calculateCircumference = function( radius ) {
+    const output = [];
+    for ( let i = 0; i < radius.length; i++ ) {
+        output.push( 2 *  Math.PI * radius[ i ] );
+    }
+    return output;
+};
+
+console.log( calculateCircumference( radius ) );
+
+const calculateDiameter = function( radius ) {
+    const output = [];
+    for ( let i = 0; i < radius.length; i++ ) {
+        output.push( 2 * radius[ i ] );
+    }
+    return output;
+};
+
+console.log( calculateDiameter( radius ) ); */
+
+console.log(`
+14> <~~~ H.O.F EXAMPLE 2 ~~~>`);
+const radius = [ 3, 1, 2, 4 ];
+
+const area = function( radius ) {
+    return Math.PI * radius * radius;
+};
+const circumference = function( radius ) {
+    return 2 * Math.PI * radius;
+};
+const diameter = function( radius ) {
+    return 2 * radius;
+};
+
+const calculate = function ( radius, logic ) {
+    const output = [];
+    for ( let i = 0; i < radius.length; i++ ) {
+        output.push( logic( radius[ i ] ) );
+    }
+    return output;
+}
+
+console.log( calculate( radius, area ) );
+console.log( calculate( radius, circumference ) );
+console.log( calculate( radius, diameter ) );
