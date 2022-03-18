@@ -228,3 +228,16 @@ function throttlingBtn( func, delay ) {
 throttling.addEventListener( "click", throttlingBtn( function() {
     console.count( "******* THROTTLING *******" );
 }, 2000 ) )
+
+
+/* Higher Order Functions (H.O.F)
+EXAMPLE 1
+The function y below which takes x function as an argument is the H.O.F and
+x function below is the callback function */
+function x() {
+    console.log( "Namaste JavaScript" );
+}
+
+function y( x ) { 
+    x();
+}
