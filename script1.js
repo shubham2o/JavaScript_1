@@ -297,10 +297,10 @@ const diameter = function( radius ) {
     return 2 * radius;
 };
 
-const calculate = function ( radius, logic ) {
+const calculate = function ( arr, logic ) {
     const output = [];
-    for ( let i = 0; i < radius.length; i++ ) {
-        output.push( logic( radius[ i ] ) );
+    for ( let i = 0; i < arr.length; i++ ) {
+        output.push( logic( arr[ i ] ) );
     }
     return output;
 }
@@ -308,3 +308,28 @@ const calculate = function ( radius, logic ) {
 console.log( calculate( radius, area ) );
 console.log( calculate( radius, circumference ) );
 console.log( calculate( radius, diameter ) );
+
+
+/* MAP FUNCTION
+The calculate function above is exactly similar to the function map */
+console.log(`
+15> <~~~ MAP FUNCTION ~~~>`);
+console.log( radius.map( area ) );
+console.log( radius.map( circumference ) );
+console.log( radius.map( diameter ) );
+
+
+// POLYFILL FOR MAP FUNCTION
+console.log(`
+16> <~~~ POLYFILL FOR MAP FUNCTION ~~~>`);
+Array.prototype.calculate1 = function ( logic ) {
+    const output = [];
+    for ( let i = 0; i < this.length; i++ ) {
+        output.push( logic( this[ i ] ) );
+    }
+    return output;
+};
+
+console.log( radius.calculate1( area ) );
+console.log( radius.calculate1( circumference ) );
+console.log( radius.calculate1( diameter ) );
