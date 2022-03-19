@@ -515,7 +515,7 @@ function x() {
     for (var i = 0; i <= 5; i++) {
         setTimeout(function () {
             console.log(i);
-        }, i * 2800);
+        }, i * 1000);
     }
     console.log("Namaste JavaScript");
 }
@@ -527,7 +527,7 @@ function y() {
     for (let i = 0; i <= 5; i++) {
         setTimeout(function () {
             console.log(i);
-        }, 2800);
+        }, i * 1000);
     }
     console.log("Namaste JavaScript using LET");
 }
@@ -536,11 +536,11 @@ y();
 
 // SOLUTION of the above problem using var
 function z() {
-    for (var i = 5; i <= 10; i++) {
+    for (var i = 6; i <= 10; i++) {
         function close(num) {
             setTimeout(function () {
                 console.log(num);
-            }, 4000);
+            }, num * 1000);
         }
         close(i);
     }
