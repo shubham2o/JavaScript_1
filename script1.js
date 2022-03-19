@@ -507,11 +507,10 @@ const trickyReduce1 = users.reduce((acc, curr) => {
 console.log(trickyReduce1);
 
 
-// setTimeout + Closures
+// PROBLEM of setTimeout + Closures (very important)
 console.log(`
 24> <~~~ setTimeout + Closures ~~~>`);
 
-// Problem
 function x() {
     for (var i = 0; i <= 5; i++) {
         setTimeout(function () {
@@ -523,7 +522,7 @@ function x() {
 
 // x();
 
-// Solution of the above problem using let
+// SOLUTION of the above problem using let
 function y() {
     for (let i = 0; i <= 5; i++) {
         setTimeout(function () {
@@ -535,7 +534,7 @@ function y() {
 
 y();
 
-// Solution of the above problem using var only
+// SOLUTION of the above problem using var
 function z() {
     for (var i = 5; i <= 10; i++) {
         function close(num) {
