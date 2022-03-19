@@ -299,7 +299,7 @@ const diameter = function( radius ) {
 
 const calculate = function ( arr, logic ) {
     const output = [];
-    for ( let i = 0; i < arr.length; i++ ) {
+    for( let i = 0; i < arr.length; i++ ) {
         output.push( logic( arr[ i ] ) );
     }
     return output;
@@ -324,7 +324,7 @@ console.log(`
 16> <~~~ POLYFILL FOR MAP FUNCTION ~~~>`);
 Array.prototype.calculate1 = function ( logic ) {
     const output = [];
-    for ( let i = 0; i < this.length; i++ ) {
+    for( let i = 0; i < this.length; i++ ) {
         output.push( logic( this[ i ] ) );
     }
     return output;
@@ -333,3 +333,103 @@ Array.prototype.calculate1 = function ( logic ) {
 console.log( radius.calculate1( area ) );
 console.log( radius.calculate1( circumference ) );
 console.log( radius.calculate1( diameter ) );
+
+
+// MAP Function 
+console.log(`
+17> <~~~ MAP FUNCTION ~~~>`);
+const arr = [ 5, 1, 3, 2, 6 ];
+
+function double( x ) {
+    return x * 2;
+}
+const result = arr.map( double );
+console.log( result );
+
+
+function triple( x ) {
+    return x * 3;
+}
+const result1 = arr.map( triple );
+console.log( result1 );
+
+
+function binary( x ) {
+    return x.toString( 2 );
+}
+const result2 = arr.map( binary );
+console.log( result2 );
+
+
+// FILTER Function 
+console.log(`
+18> <~~~ FILTER FUNCTION ~~~>`);
+
+function isOdd( x ) {
+    return x % 2;
+}
+const outcome = arr.filter( isOdd );
+console.log( outcome );
+
+
+function isEven( x ) {
+    return x % 2 === 0;
+}
+const outcome1 = arr.filter( isEven );
+console.log( outcome1 );
+
+
+function greaterThan4( x ) {
+    return x > 4;
+}
+const outcome2 = arr.filter( greaterThan4 );
+console.log( outcome2 );
+
+/* Above code in Arrow Function
+const outcome2 = arr.filter( ( x ) =>  x > 4 );
+console.log( outcome2 ); */
+
+
+// REDUCE Function
+console.log(`
+19> <~~~ REDUCE FUNCTION ~~~>`);
+
+// Non-conventional way to find the sum of array.
+function findSum( arr ) {
+    let sum = 0;
+    for( let i = 0; i < arr.length; i++ ) {
+        sum = sum + arr[ i ];
+    }
+    return sum;
+}
+const answer = findSum( arr );
+console.log( answer );
+
+// Conventional way to find the sum of array.
+const sum = arr.reduce( function( acc, curr ) {
+    acc = acc + curr;
+    return acc;
+}, 0 );
+console.log( sum );
+
+// Non-conventional way to find the max from an array.
+function findMax( arr ) {
+    let max = 0;
+    for( let i = 0; i < arr.length; i++ ) {
+        if( arr[ i ] > max ) {
+            max = arr[ i ];
+        }
+    }
+    return max;
+}
+const answer1 = findMax( arr );
+console.log( answer1 );
+
+// Conventional way to find the max from an array.
+const max = arr.reduce( function( max, curr) {
+    if( curr > max ) {
+        max = curr;
+    }
+    return max;
+}, 0 );
+console.log( max );
