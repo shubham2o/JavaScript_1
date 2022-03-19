@@ -548,3 +548,21 @@ function z() {
 }
 
 z();
+
+
+// Callback Functions
+console.log(`
+25> <~~~ Callback Functions ~~~>`);
+
+setTimeout(function () {
+    console.log("TIMER");
+}, 5000);
+
+function abc(ghi) {
+    console.log("X");
+    ghi();
+};
+
+abc(function xyz() {
+    console.log("Y");
+});
