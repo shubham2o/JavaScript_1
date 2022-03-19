@@ -505,3 +505,47 @@ const trickyReduce1 = users.reduce((acc, curr) => {
 }, []);
 
 console.log(trickyReduce1);
+
+
+// setTimeout + Closures
+console.log(`
+24> <~~~ setTimeout + Closures ~~~>`);
+
+// Problem
+function x() {
+    for (var i = 0; i <= 5; i++) {
+        setTimeout(function () {
+            console.log(i);
+        }, i * 2800);
+    }
+    console.log("Namaste JavaScript");
+}
+
+// x();
+
+// Solution of the above problem using let
+function y() {
+    for (let i = 0; i <= 5; i++) {
+        setTimeout(function () {
+            console.log(i);
+        }, 2800);
+    }
+    console.log("Namaste JavaScript using LET");
+}
+
+y();
+
+// Solution of the above problem using var only
+function z() {
+    for (var i = 5; i <= 10; i++) {
+        function close(num) {
+            setTimeout(function () {
+                console.log(num);
+            }, 4000);
+        }
+        close(i);
+    }
+    console.log("Namaste JavaScript using VAR");
+}
+
+z();
