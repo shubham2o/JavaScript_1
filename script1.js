@@ -566,3 +566,26 @@ function abc(ghi) {
 abc(function xyz() {
     console.log("Y");
 });
+
+
+// Trust Issues with setTimeout()
+console.log(`
+26> <~~~ Trust Issues with setTimeout() ~~~>`);
+
+console.log("START");
+
+setTimeout(function cb() {
+    console.log("CALLBACK");
+}, 12000);
+
+console.log("END");
+
+// Suppose we have million lines of code
+
+let startDate = new Date().getTime();
+let endDate = startDate;
+while (endDate < startDate + 14000) {
+    endDate = new Date().getTime();
+}
+
+console.log("WHILE EXPIRES HERE");
