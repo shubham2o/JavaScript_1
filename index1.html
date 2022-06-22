@@ -1,34 +1,44 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
+
 <head>
-    <meta charset = "UTF-8">
-    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
-    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-    <title>index1.html</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshay Saini's Namaste JS</title>
 </head>
+
 <body>
     <!-- Polyfill -->
     <h2>Polyfill</h2>
-    <p>• In web development, a polyfill is code that implements a feature on web browsers that 
+    <p>• In web development, a polyfill is code that implements a feature on web browsers that
         do not support the feature.</p>
-    <p>• Most often, it refers to a JavaScript library that implements an HTML5 or CSS web standard, 
+    <p>• Most often, it refers to a JavaScript library that implements an HTML5 or CSS web standard,
         either an established standard on older browsers, or a proposed standard on existing browsers.</p>
-    <p>• In other words, it means if the current browser doesn't support the new method, i.e, call 
-        or apply or bind than polyfill is used with these methods to get code worked in the old 
+    <p>• In other words, it means if the current browser doesn't support the new method, i.e, call
+        or apply or bind than polyfill is used with these methods to get code worked in the old
         browser.</p>
+    <hr>
+
+    <!-- Polyfill for Call Method -->
+    <h2>Polyfill for Call Method</h2>
+    <hr>
+
+    <!-- Polyfill for Apply Method -->
+    <h2>Polyfill for Apply Method</h2>
     <hr>
 
     <!-- Bind Method -->
     <h2>Bind Method</h2>
     <p>• With the bind() method, an object can borrow a method from another object.</p>
-    <p>• Sometimes the bind() method has to be used to prevent loosing this. When a function is used 
+    <p>• Sometimes the bind() method has to be used to prevent loosing this. When a function is used
         as a callback, this is lost.</p>
-    <p>• The bind() method creates a new function that, when called, has its this keyword set to the 
-        provided value, with a given sequence of arguments preceding any provided when the new function 
+    <p>• The bind() method creates a new function that, when called, has its this keyword set to the
+        provided value, with a given sequence of arguments preceding any provided when the new function
         is called.</p>
     <p>• Why do we use the bind method?
-        We use the Bind() method to call a function with the this value, this keyword refers to the same 
-        object which is currently selected . In other words, bind() method allows us to easily set which 
+        We use the Bind() method to call a function with the this value, this keyword refers to the same
+        object which is currently selected . In other words, bind() method allows us to easily set which
         object will be bound by the this keyword when a function or method is invoked.</p>
     <hr>
 
@@ -38,8 +48,8 @@
 
     <!-- Function Currying -->
     <h2>Function Currying</h2>
-    <p>• In other terms, currying is when a function — instead of taking all arguments at one time — 
-        takes the first one and returns a new function, which takes the second one and returns a new 
+    <p>• In other terms, currying is when a function — instead of taking all arguments at one time —
+        takes the first one and returns a new function, which takes the second one and returns a new
         function, which takes the third one, etc. until all arguments are completed.</p>
     <hr>
 
@@ -53,56 +63,58 @@
 
     <!-- Debouncing via Button -->
     <h2>Debouncing via Button</h2>
-    <button id = "debounce">CLICK HERE</button>
-    <br><br><hr>
+    <button id="debounce">CLICK HERE</button>
+    <br><br>
+    <hr>
 
     <!-- Debouncing via Input type text -->
     <h2>Debouncing via Input type text</h2>
-    <input type = "text" onkeyup = "betterFunction()">
-    <br><br><hr>
+    <input type="text" onkeyup="betterFunction()">
+    <br><br>
+    <hr>
 
     <!-- Event Delegation -->
     <h2>Event Delegation</h2>
     <p>• Event Delegation is basically a pattern to handle events efficiently.</p>
-    <p>• Instead of adding an event listener to each and every similar element, we can add an event 
-        listener to a parent element and call an event on a particular target using the .target property 
+    <p>• Instead of adding an event listener to each and every similar element, we can add an event
+        listener to a parent element and call an event on a particular target using the .target property
         of the event object.</p>
     <hr>
 
     <!-- Event Delegation via Unordered List -->
     <h2>Event Delegation via Unordered List</h2>
     <div>
-        <ul id = "category">
-            <li id = "laptops">laptops</li>
-            <li id = "cameras">cameras</li>
-            <li id = "shoes">shoes</li>
+        <ul id="category">
+            <li id="laptops">laptops</li>
+            <li id="cameras">cameras</li>
+            <li id="shoes">shoes</li>
         </ul>
     </div>
     <hr>
 
     <!-- Event Delegation via Input type text -->
     <h2>Event Delegation via Input type text</h2>
-    <div id = "form">
-        First Name : <input type = "text" id = "firstName" data-uppercase><br><br>
-        Last Name : <input type = "text" id = "lastName" data-uppercase><br><br>
-        Gender : <input type = "text" id = "gender" data-uppercase>
+    <div id="form">
+        First Name : <input type="text" id="firstName" data-uppercase><br><br>
+        Last Name : <input type="text" id="lastName" data-uppercase><br><br>
+        Gender : <input type="text" id="gender" data-uppercase>
     </div>
     <hr>
 
     <!-- Prototype and Prototypal Inheritance -->
     <h2>Prototype and Prototypal Inheritance</h2>
     <p>• When it comes to inheritance, JavaScript only has one construct: objects.</p>
-    <p>• Each object has a private property which holds a link to another object called its prototype. 
-        That prototype object has a prototype of its own, and so on until an object is reached with null 
+    <p>• Each object has a private property which holds a link to another object called its prototype.
+        That prototype object has a prototype of its own, and so on until an object is reached with null
         as its prototype.</p>
-    <p>• When we read a property from object , and it's missing, JavaScript automatically takes it from 
+    <p>• When we read a property from object , and it's missing, JavaScript automatically takes it from
         the prototype</p>
     <hr>
 
     <!-- Throttling -->
     <h2>Throttling</h2>
     <p>• Throttling or sometimes is also called throttle function is a practice used in websites.</p>
-    <p>• Throttling is used to call a function after every millisecond or a particular interval of 
+    <p>• Throttling is used to call a function after every millisecond or a particular interval of
         time only the first click is executed immediately.</p>
     <p>• It prevents frequent calling of the function.</p>
     <p>• It makes the website faster and controls the rate at which a particular function is called.</p>
@@ -110,13 +122,13 @@
 
     <!-- Throttling via Button -->
     <h2>Throttling via Button</h2>
-    <button type = "button" id = "throttleBtn">CLICK ME</button>
+    <button type="button" id="throttleBtn">CLICK ME</button>
     <hr>
 
     <!-- Higher Order Functions -->
     <h2>Higher Order Functions</h2>
     <p>• A higher order function is a function that takes a function as an argument, or returns a function.</p>
-    <p>• Higher order function is in contrast to first order functions, which don't take a function as an 
+    <p>• Higher order function is in contrast to first order functions, which don't take a function as an
         argument or return a function as output.</p>
     <hr>
 
@@ -137,7 +149,7 @@
 
     <!-- REDUCE Function -->
     <h2>REDUCE Function</h2>
-    <p>• The reduce() method executes a reducer function for array element. The reduce() method returns a 
+    <p>• The reduce() method executes a reducer function for array element. The reduce() method returns a
         single value: the function's accumulated result.</p>
     <p>• The reduce() method does not execute the function for empty array elements.</p>
     <p>• It does not change the original array.</p>
@@ -150,11 +162,11 @@
 
     <!-- Callback Functions -->
     <h2>Callback Functions</h2>
-    <p>• A callback is a function passed as an argument to another function. This technique allows a 
+    <p>• A callback is a function passed as an argument to another function. This technique allows a
         function to call another function.</p>
     <p>• It can run after another function has finished.</p>
     <p>• It helps us develop asynchronous JavaScript code and keeps us safe from problems and error.</p>
-    <p>• In JavaScript, the way to create a callback function is to pass it as a parameter to another 
+    <p>• In JavaScript, the way to create a callback function is to pass it as a parameter to another
         function, and then to call it back right after something has happened or some task is completed.</p>
     <hr>
 
@@ -167,10 +179,11 @@
 
     <!-- Why does JavaScript has only one call-stack? -->
     <h2>Why does JavaScript has only one call-stack?</h2>
-    <p>• It is a synchronous single-threaded language and all the pieces of code is executed there itself 
+    <p>• It is a synchronous single-threaded language and all the pieces of code is executed there itself
         line by line.</p>
     <hr>
 
-    <script src = "script1.js"></script>
+    <script src="script1.js"></script>
 </body>
+
 </html>

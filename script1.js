@@ -15,8 +15,50 @@ let fullName = function (initials, nationality) {
 }
 
 
+// Call Method
+console.log(`1.1> <~~~ CALL METHOD ~~~>`);
+
+fullName.call(name, "(SS)", "Indian");
+fullName.call(gsw, "(SC30)", "American");
+
+
+// Polyfill for Call Method
+console.log(`
+1.2> <~~~ POLYFILL CALL METHOD ~~~>`);
+
+Function.prototype.myCall = function (scope, ...args) {
+    scope._this = this;
+    return scope._this(...args);
+}
+
+fullName.myCall(name, "(SS)", "Indian");
+fullName.myCall(gsw, "(SC30)", "American");
+
+
+// Apply Method
+console.log(`
+1.3> <~~~ APPLY METHOD ~~~>`);
+
+fullName.apply(name, ["(SS)", "Indian"]);
+fullName.apply(gsw, ["(SC30)", "American"]);
+
+
+// Polyfill for Apply Method
+console.log(`
+1.4> <~~~ POLYFILL APPLY METHOD ~~~>`);
+
+Function.prototype.myApply = function (scope, args) {
+    scope._this = this;
+    return scope._this(...args);
+}
+
+fullName.myApply(name, ["(SS)", "Indian"]);
+fullName.myApply(gsw, ["(SC30)", "American"]);
+
+
 // Bind Method
-console.log(`1> <~~~ NORMAL BIND METHOD ~~~>`);
+console.log(`
+1.5> <~~~ BIND METHOD ~~~>`);
 
 let getFullName = fullName.bind(name, "(SS)");
 getFullName("Indian");
