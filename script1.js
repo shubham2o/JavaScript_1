@@ -127,7 +127,7 @@ multiplyBy5(5, 1);
 
 // Function Currying via Closures
 console.log(`
-5> <~~~ FUNCTION CURRYING via Closures ~~~>`);
+5.1> <~~~ FUNCTION CURRYING via Closures ~~~>`);
 
 let multiplyX = function (x) {
     return function (y) {
@@ -146,6 +146,58 @@ multiplyBy04(12);
 
 let multiplyBy05 = multiplyX();
 multiplyBy05(5, 1);
+
+
+// Function Currying via Closures (Best-worst practice)
+console.log(`
+5.2> <~~~ CURRYING via Closures (Best-worst practice) ~~~>`);
+
+function Addition(a) {
+    return function (b) {
+        return function (c) {
+            return a + b + c;
+        }
+    }
+}
+
+let res = Addition(2);
+console.log("• " + res);
+
+let data = res(4);
+console.log("• " + data);
+
+let output = data(7);
+console.log("• via Worst Approach " + output);
+
+// But this is not the right approach or the correct method to solve the 
+// above problem as this is very time consuming and not readable enough.
+// So, above used approach is the WORST approach.
+
+// Now, the BEST approach to solve the problem is mentioned below. 
+let res1 = Addition(2)(4)(7);
+console.log("• via Best Approach " + res1);
+
+
+// Function Currying via Closures (Real-case example)
+console.log(`
+5.3> <~~~ CURRYING via Closures (Real-case example) ~~~>`);
+
+let user = {
+    name: 'Ajay',
+    age: 28
+};
+
+function userInfo(arg) {
+    return function (info) {
+        return arg[info]
+    }
+}
+
+let res2 = userInfo(user)('name');
+console.log("• " + res2);
+
+let res3 = userInfo(user)('age');
+console.log("• " + res3);
 
 
 // Debouncing via Button
