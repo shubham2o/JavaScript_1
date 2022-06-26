@@ -8,7 +8,7 @@ let gsw = {
     lastName: "Curry"
 }
 
-let fullName = function (initials, nationality) {
+let fullName = function(initials, nationality) {
     console.log(
         "• " + this.firstName + " " + this.lastName + " " + initials + " " + nationality
     );
@@ -26,7 +26,7 @@ fullName.call(gsw, "(SC30)", "American");
 console.log(`
 1.2> <~~~ POLYFILL CALL METHOD ~~~>`);
 
-Function.prototype.myCall = function (scope, ...args) {
+Function.prototype.myCall = function(scope, ...args) {
     scope._this = this;
     return scope._this(...args);
 }
@@ -47,7 +47,7 @@ fullName.apply(gsw, ["(SC30)", "American"]);
 console.log(`
 1.4> <~~~ POLYFILL APPLY METHOD ~~~>`);
 
-Function.prototype.myApply = function (scope, args) {
+Function.prototype.myApply = function(scope, args) {
     scope._this = this;
     return scope._this(...args);
 }
@@ -71,9 +71,9 @@ getFullGsw("American");
 console.log(`
 2> <~~~ POLYFILL BIND METHOD via Call ~~~>`);
 
-Function.prototype.bind1 = function (name, initials) {
+Function.prototype.bind1 = function(name, initials) {
     let obj1 = this;
-    return function (nationality) {
+    return function(nationality) {
         obj1.call(name, initials, nationality);
     }
 }
@@ -89,10 +89,10 @@ getFullGsw1("American");
 console.log(`
 3> <~~~ POLYFILL BIND METHOD via Apply ~~~>`);
 
-Function.prototype.bind2 = function (...args) {
+Function.prototype.bind2 = function(...args) {
     let obj2 = this,
         params = args.slice(1);
-    return function (...args2) {
+    return function(...args2) {
         obj2.apply(args[0], [...params, ...args2]);
     }
 }
@@ -108,7 +108,7 @@ getFullGsw2("American");
 console.log(`
 4> <~~~ FUNCTION CURRYING via Bind Method ~~~>`);
 
-let multiply = function (x, y) {
+let multiply = function(x, y) {
     console.log("• " + x * y);
 }
 
@@ -129,8 +129,8 @@ multiplyBy5(5, 1);
 console.log(`
 5.1> <~~~ FUNCTION CURRYING via Closures ~~~>`);
 
-let multiplyX = function (x) {
-    return function (y) {
+let multiplyX = function(x) {
+    return function(y) {
         console.log("• " + x * y);
     }
 }
@@ -153,8 +153,8 @@ console.log(`
 5.2> <~~~ CURRYING via Closures (Best-worst practice) ~~~>`);
 
 function Addition(a) {
-    return function (b) {
-        return function (c) {
+    return function(b) {
+        return function(c) {
             return a + b + c;
         }
     }
@@ -188,7 +188,7 @@ let user = {
 };
 
 function userInfo(arg) {
-    return function (info) {
+    return function(info) {
         return arg[info]
     }
 }
@@ -207,16 +207,16 @@ let button = document.getElementById("debounce");
 
 function debounce(func, delay) {
     let timer;
-    return function () {
+    return function() {
         clearTimeout(timer);
         let argume = arguments;
-        timer = setTimeout(function () {
+        timer = setTimeout(function() {
             func.apply(this, argume);
         }, delay);
     }
 }
 
-button.addEventListener("click", debounce(function () {
+button.addEventListener("click", debounce(function() {
     console.count("Debounce... ")
 }, 1200));
 
@@ -229,9 +229,9 @@ const getData = () => {
     console.count("Fetching Data... ");
 }
 
-const debounce1 = function (fn, dl) {
+const debounce1 = function(fn, dl) {
     let time;
-    return function () {
+    return function() {
         clearTimeout(time);
         let context = this,
             argumen = arguments;
@@ -275,7 +275,7 @@ const loggerFunc = () => {
 
 const throttle = (fn, limit) => {
     let flag = true;
-    return function () {
+    return function() {
         let context = this;
         let args = arguments;
         if (flag) {
@@ -310,7 +310,7 @@ let throttling = document.getElementById("throttleBtn");
 
 function throttlingBtn(func, delay) {
     let prev = 0;
-    return function (...args) {
+    return function(...args) {
         let now = new Date().getTime();
         if (now - prev > delay) {
             prev = now;
@@ -319,7 +319,7 @@ function throttlingBtn(func, delay) {
     }
 }
 
-throttling.addEventListener("click", throttlingBtn(function () {
+throttling.addEventListener("click", throttlingBtn(function() {
     console.count("******* THROTTLING *******");
 }, 2000))
 
@@ -382,17 +382,17 @@ console.log(`
 14> <~~~ H.O.F EXAMPLE 2 ~~~>`);
 const radius = [3, 1, 2, 4];
 
-const area = function (radius) {
+const area = function(radius) {
     return Math.PI * radius * radius;
 };
-const circumference = function (radius) {
+const circumference = function(radius) {
     return 2 * Math.PI * radius;
 };
-const diameter = function (radius) {
+const diameter = function(radius) {
     return 2 * radius;
 };
 
-const calculate = function (arr, logic) {
+const calculate = function(arr, logic) {
     const output = [];
     for (let i = 0; i < arr.length; i++) {
         output.push(logic(arr[i]));
@@ -417,7 +417,7 @@ console.log(radius.map(diameter));
 // POLYFILL FOR MAP FUNCTION
 console.log(`
 16> <~~~ POLYFILL FOR MAP FUNCTION ~~~>`);
-Array.prototype.calculate1 = function (logic) {
+Array.prototype.calculate1 = function(logic) {
     const output = [];
     for (let i = 0; i < this.length; i++) {
         output.push(logic(this[i]));
@@ -501,7 +501,7 @@ const answer = findSum(arr);
 console.log(answer);
 
 // Conventional way to find the sum of array.
-const sum = arr.reduce(function (acc, curr) {
+const sum = arr.reduce(function(acc, curr) {
     acc = acc + curr;
     return acc;
 }, 0);
@@ -521,7 +521,7 @@ const answer1 = findMax(arr);
 console.log(answer1);
 
 // Conventional way to find the max from an array.
-const max = arr.reduce(function (max, curr) {
+const max = arr.reduce(function(max, curr) {
     if (curr > max) {
         max = curr;
     }
@@ -564,7 +564,7 @@ console.log(trickyMap);
 console.log(`
 21> <~~~ TRICKY REDUCE function Example ~~~>`);
 
-const trickyReduce = users.reduce(function (acc, curr) {
+const trickyReduce = users.reduce(function(acc, curr) {
     if (acc[curr.age]) {
         acc[curr.age] = ++acc[curr.age];
     } else {
@@ -607,7 +607,7 @@ console.log(`
 
 function x() {
     for (var i = 0; i <= 5; i++) {
-        setTimeout(function () {
+        setTimeout(function() {
             console.log(i);
         }, i * 1000);
     }
@@ -619,7 +619,7 @@ function x() {
 // SOLUTION of the above problem using let
 function y() {
     for (let i = 0; i <= 5; i++) {
-        setTimeout(function () {
+        setTimeout(function() {
             console.log(i);
         }, i * 1000);
     }
@@ -632,7 +632,7 @@ y();
 function z() {
     for (var i = 6; i <= 10; i++) {
         function close(num) {
-            setTimeout(function () {
+            setTimeout(function() {
                 console.log(num);
             }, num * 1000);
         }
@@ -648,7 +648,7 @@ z();
 console.log(`
 25> <~~~ Callback Functions ~~~>`);
 
-setTimeout(function () {
+setTimeout(function() {
     console.log("TIMER");
 }, 5000);
 
